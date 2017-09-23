@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="RkB-KC-UYA" customClass="TDDatePicker">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="260"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mf9-Xu-n3X">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+                    <subviews>
+                        <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycu-Pw-4QS">
+                            <rect key="frame" x="0.0" y="1" width="320" height="44"/>
+                            <color key="backgroundColor" red="0.99215686270000003" green="0.98039215690000003" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="Ufd-yH-QqG"/>
+                                <constraint firstAttribute="width" constant="320" id="V24-Np-csL"/>
+                            </constraints>
+                            <items>
+                                <navigationItem id="HD6-OG-YFU">
+                                    <barButtonItem key="leftBarButtonItem" title="Cancel" id="g37-w3-B1I">
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="btnCancelPress:" destination="RkB-KC-UYA" id="KSU-0h-6XZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem key="rightBarButtonItem" title="Done" id="KtC-V8-pJb">
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="btnDonePress:" destination="RkB-KC-UYA" id="4NQ-YK-KrR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                    </subviews>
+                    <color key="backgroundColor" red="0.99215686270000003" green="0.98039215690000003" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="ycu-Pw-4QS" firstAttribute="top" secondItem="mf9-Xu-n3X" secondAttribute="top" constant="1" id="696-Ja-frY"/>
+                        <constraint firstItem="ycu-Pw-4QS" firstAttribute="leading" secondItem="mf9-Xu-n3X" secondAttribute="leading" id="cDx-BP-LOH"/>
+                        <constraint firstAttribute="width" constant="320" id="i72-XL-DZ1"/>
+                        <constraint firstAttribute="bottom" secondItem="ycu-Pw-4QS" secondAttribute="bottom" id="sPI-Qq-RY1"/>
+                        <constraint firstAttribute="trailing" secondItem="ycu-Pw-4QS" secondAttribute="trailing" id="wat-hg-G1z"/>
+                        <constraint firstAttribute="height" constant="45" id="xBV-pd-x6h"/>
+                    </constraints>
+                </view>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="KIg-aV-Ldg">
+                    <rect key="frame" x="0.0" y="45" width="320" height="216"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="fdR-U6-ve7"/>
+                        <constraint firstAttribute="height" constant="216" id="wbQ-8j-ffw"/>
+                    </constraints>
+                    <date key="date" timeIntervalSinceReferenceDate="465930234.53325599">
+                        <!--2015-10-07 17:03:54 +0000-->
+                    </date>
+                </datePicker>
+            </subviews>
+            <color key="backgroundColor" red="0.67450980390000004" green="0.67450980390000004" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="KIg-aV-Ldg" firstAttribute="top" secondItem="mf9-Xu-n3X" secondAttribute="bottom" id="9Sp-Mb-Rg9"/>
+                <constraint firstItem="mf9-Xu-n3X" firstAttribute="top" secondItem="RkB-KC-UYA" secondAttribute="top" id="RPI-Rd-8He"/>
+                <constraint firstAttribute="trailing" secondItem="KIg-aV-Ldg" secondAttribute="trailing" id="YgL-9m-1Tn"/>
+                <constraint firstAttribute="trailing" secondItem="mf9-Xu-n3X" secondAttribute="trailing" id="hZd-wB-pDk"/>
+                <constraint firstItem="KIg-aV-Ldg" firstAttribute="top" secondItem="mf9-Xu-n3X" secondAttribute="bottom" id="ld2-F5-oJz"/>
+                <constraint firstItem="KIg-aV-Ldg" firstAttribute="leading" secondItem="RkB-KC-UYA" secondAttribute="leading" id="oeZ-De-Hkb"/>
+                <constraint firstItem="mf9-Xu-n3X" firstAttribute="leading" secondItem="RkB-KC-UYA" secondAttribute="leading" id="qRP-aP-vr7"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="td_NavigationBar" destination="ycu-Pw-4QS" id="YDz-yF-u25"/>
+                <outlet property="td_btnCancel" destination="g37-w3-B1I" id="NPU-GY-yoZ"/>
+                <outlet property="td_btnDone" destination="KtC-V8-pJb" id="FFg-0V-z3w"/>
+                <outlet property="td_dpkDate" destination="KIg-aV-Ldg" id="Xlm-h7-kr8"/>
+            </connections>
+            <point key="canvasLocation" x="348" y="249"/>
+        </view>
+    </objects>
+</document>

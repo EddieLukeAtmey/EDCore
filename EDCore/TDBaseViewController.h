@@ -7,12 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TDEngineLog.h"
+#import "TDThemeManagement.h"
+#import "UIStoryboard+TDCore.h"
 
 @interface TDBaseViewController : UIViewController
-{    
-    NSMutableArray *arrCellIdentifiers, *arrHeights;
-}
 
 #pragma mark - Focus Field
 /**
@@ -149,7 +147,28 @@
 #pragma mark - Category Util
 @interface TDBaseViewController (Util)
 
-- (void)td_delay:(CGFloat)secs completed:(void (^)())completed;
+- (void)td_delay:(CGFloat)secs completed:(void (^) ())completed;
 - (UIView *)td_getViewFromXib:(NSString *)nameXib index:(NSInteger )index;
 
 @end
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#pragma mark - Category threads
+@interface TDBaseViewController (threads)
+
+- (void)td_main_thread:(void(^)())block;
+- (void)td_background_thread:(void(^)())block;
+
+@end
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#pragma mark - TDTheme
+@interface TDBaseViewController (TDTheme)
+
+- (void)td_useThemeManage;
+
+@end
+

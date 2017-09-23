@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
     s.requires_arc = true
     s.frameworks   = ['Foundation', 'UIKit', 'CoreGraphics', 'QuartzCore', 'CoreFoundation']
 
-    s.source_files = 'EDCore/*'
+    s.source_files = 'EDCore/*', 'TDCategory/*','TDEvent/*','TDPopup/*','TDUtils/*'
 
     s.subspec 'TDCategory' do |ss|
     ss.source_files = 'TDCategory/*'
