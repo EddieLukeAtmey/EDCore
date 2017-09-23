@@ -1,5 +1,7 @@
 # EDCore
-<<<<<<< HEAD
+
+EDCore is a convenience framework, created to make life of a iOS developer easier. Writen with Objective-C.
+Initially cloned from my co-worker's [TDCore](https://github.com/thuydao/TDCore), who isn't really active nowaday.
 
 [![Version](https://img.shields.io/cocoapods/v/EDCore.svg?style=flat)](http://cocoapods.org/pods/EDCore)
 [![License](https://img.shields.io/cocoapods/l/EDCore.svg?style=flat)](http://cocoapods.org/pods/EDCore)
@@ -29,5 +31,4 @@ Eddie Luke Atmey, eddie.marvin116@gmail.com
 EDCore is available under the MIT license. See the LICENSE file for more info.
 =======
 Copyright @ Eddie Luke Atmey
->>>>>>> 11524447be7ea8a7757ff65614cce57b6e6c014e
 
