@@ -8,7 +8,13 @@
 //
 
 #import <UIKit/UIKit.h>
+
+
+typedef void (^UIViewTDCoreBlock) ();
+
 @interface UIView (TDCore)
+
+@property (nonatomic, copy) UIViewTDCoreBlock blockEventOfTDCore;
 
 #pragma mark - Get UI
 - (UILabel *)td_lbWithTag:(NSInteger)tag;
@@ -90,8 +96,12 @@
 #pragma mark - Add button - Center
 
 - (void)td_addButtonWithTarget:(id )target action:(SEL )action withX:(CGFloat )x withY:(CGFloat )y withWidth:(CGFloat )width withHeight:(CGFloat )height;
+
+- (void)td_addButtonwithX:(CGFloat )x withY:(CGFloat )y withWidth:(CGFloat )width withHeight:(CGFloat )height;
+
 - (void)td_addButtonAtCenterWithTarget:(id )target withAction:(SEL )action;
 - (void)td_addButtonAtCenterWithTarget:(id )target withAction:(SEL )action withSize:(CGSize )size;
+- (void)td_addButtonAtCenterWithBlock:(UIViewTDCoreBlock)block withSize:(CGSize)size;
 
 #pragma mark - Add button - Other
 - (void)td_addButtonWithTarget:(id )target action:(SEL )action withX:(CGFloat )x withY:(CGFloat )y;

@@ -103,13 +103,6 @@
     return @"";
 }
 
-- (NSDate *)td_dateForKey:(NSString *)key format:(NSString *)dateFormat
-{
-    NSString *stringDate = [self td_stringForKey:key];
-    NSDateFormatter *formatter = [NSDateFormatter new];
-    formatter.dateFormat = dateFormat;
-    return [formatter dateFromString:stringDate];
-}
 
 - (NSInteger)td_intForKey:(NSString *)key
 {
@@ -120,7 +113,7 @@
         return 0;
     }
     
-    return [object integerValue];
+    return [object intValue];
 }
 
 
@@ -136,6 +129,17 @@
     return [object floatValue];
 }
 
+- (double)td_doubleForKey:(NSString *)key
+{
+    id object = [self td_objectForKey:key];
+    
+    if ( !object )
+    {
+        return 0.0f;
+    }
+    
+    return [object doubleValue];
+}
 
 - (BOOL)td_boolForKey:(NSString *)key
 {

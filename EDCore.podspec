@@ -8,47 +8,50 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = "EDCore"
-  s.version          = "1.0"
-  s.summary          = "EDCore is a iOS framework. You have beauty project and stable. It will down time development for you"
-  s.description      = "EDCore allows configure & create base to any iOS Project. Below are services needed to be implement basic funtion. so it's help to you can write short code and meanable. So you will the clear source code"
-  s.homepage         = "https://github.com/EddieLukeAtmey/ELCore"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
-  s.license          = 'MIT'
-  s.author           = { "Eddie Luke Atmey" => "eddie.marvin116@gmail.com" }
-  s.source           = { :git => 'https://github.com/EddieLukeAtmey/EDCore.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://fb.com/Eddie.Something'
+    s.name             = "EDCore"
+    s.version          = "1.0"
+    s.summary          = "EDCore is a iOS framework. You have beauty project and stable. It will down time development for you"
+    s.description      = "EDCore allows configure & create base to any iOS Project. Below are services needed to be implement basic funtion. so it's help to you can write short code and meanable. So you will the clear source code"
+    s.homepage         = "https://github.com/EddieLukeAtmey/ELCore"
+    # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+    s.license          = 'MIT'
+    s.author           = { "Eddie Luke Atmey" => "eddie.marvin116@gmail.com" }
+    s.source           = { :git => 'https://github.com/EddieLukeAtmey/EDCore.git', :tag => s.version.to_s }
+    # s.social_media_url = 'https://fb.com/Eddie.Something'
 
-  s.platform     = :ios, '6.0'
-  s.requires_arc = true
+    s.platform     = :ios, '8.0'
+    s.requires_arc = true
+    s.frameworks   = ['Foundation', 'UIKit', 'CoreGraphics', 'QuartzCore', 'CoreFoundation']
 
-  s.source_files = 'EDCore/*'
+    s.source_files = 'EDCore/*'
 
- s.subspec 'TDCategory' do |ss|
+    s.subspec 'TDCategory' do |ss|
     ss.source_files = 'TDCategory/*'
-  end
+    end
 
- s.subspec 'TDEngineLog' do |ss|
+    s.subspec 'TDEngineLog' do |ss|
     ss.source_files = 'TDEngineLog/*'
-  end 
+    end
 
- s.subspec 'TDEvent' do |ss|
+    s.subspec 'TDEvent' do |ss|
     ss.source_files = 'TDEvent/*'
-  end
+    end
 
- s.subspec 'TDPopup' do |ss|
+    s.subspec 'TDPopup' do |ss|
     ss.source_files = 'TDPopup/*'
-  end
+    end
 
- s.subspec 'TDUtils' do |ss|
+    s.subspec 'TDUtils' do |ss|
     ss.source_files = 'TDUtils/*'
-  end
+    end
 
-  s.resource_bundles = {
-    'TDCore' => ['Assets/*.png']
-  }
+    s.resource_bundles = {
+    'EDCore' => ['Resources/**/*.{png,xib,storyboad}']
+    }
 
-  # s.public_header_files = 'EDCore/EDCore.h','TDBaseViewController/*.h','TDCategory/*.h','TDEngineLog/*.h','TDEvent/*.h','TDPopup/*.h','TDUtils/*.h','UITableViewDragLoad/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+
+    s.public_header_files = 'TDCore/TDCore.h','TDCore/*.h','TDCategory/*.h','TDEvent/*.h','TDPopup/*.h','TDUtils/*.h','UITableViewDragLoad/**/*.h'
+    # s.frameworks = 'UIKit', 'MapKit'
+    s.dependency 'AutoCoding'
+
 end

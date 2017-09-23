@@ -24,7 +24,7 @@
  *  initialize
  *  Overwrite to customize init object
  */
-- (void)initialize;
+- (void)td_initialize;
 
 #pragma mark - singleton
 
@@ -33,6 +33,10 @@
  *
  *  @return v
  */
-+ (instancetype)sharedInstance;
++ (instancetype)td_sharedInstance;
+
+#pragma mark - Public Method
+
+- (NSDictionary *)td_dictionary;
 
 @end

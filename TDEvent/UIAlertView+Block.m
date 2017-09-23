@@ -45,32 +45,41 @@ static const void *UIAlertViewShouldEnableFirstOtherButtonBlockKey  = &UIAlertVi
 
 #pragma mark - Add more by ThuyDao
 // Have not Style
-+ (instancetype)showAlertViewWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles tapBlock:(UIAlertViewCompletionBlock)tapBlock
++ (instancetype)td_showAlertViewWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles tapBlock:(UIAlertViewCompletionBlock)tapBlock
 {
-    return [self showAlertViewWithTitle:title message:message style:UIAlertViewStyleDefault cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles tapBlock:tapBlock];
+    return [self td_showAlertViewWithTitle:title message:message style:UIAlertViewStyleDefault cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles tapBlock:tapBlock];
 }
 
 // Have not Style - title
-+ (instancetype)showAlertViewWithMessage:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles tapBlock:(UIAlertViewCompletionBlock)tapBlock
++ (instancetype)td_showAlertViewWithMessage:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles tapBlock:(UIAlertViewCompletionBlock)tapBlock
 {
-    return [self showAlertViewWithTitle:ALERT_BLOCK_APP_NAME message:message style:UIAlertViewStyleDefault cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles tapBlock:tapBlock];
+    return [self td_showAlertViewWithTitle:ALERT_BLOCK_APP_NAME message:message style:UIAlertViewStyleDefault cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles tapBlock:tapBlock];
 }
 
 // Have not Style - title - other button
-+ (instancetype)showAlertViewWithMessage:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle tapBlock:(UIAlertViewCompletionBlock)tapBlock
++ (instancetype)td_showAlertViewWithMessage:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle tapBlock:(UIAlertViewCompletionBlock)tapBlock
 {
-    return [self showAlertViewWithTitle:ALERT_BLOCK_APP_NAME message:message style:UIAlertViewStyleDefault cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil tapBlock:tapBlock];
+    return [self td_showAlertViewWithTitle:ALERT_BLOCK_APP_NAME message:message style:UIAlertViewStyleDefault cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil tapBlock:tapBlock];
 }
 
 // Have not Style - other button
-+ (instancetype)showAlertViewWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle tapBlock:(UIAlertViewCompletionBlock)tapBlock
++ (instancetype)td_showAlertViewWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle tapBlock:(UIAlertViewCompletionBlock)tapBlock
 {
-    return [self showAlertViewWithTitle:title message:message style:UIAlertViewStyleDefault cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil tapBlock:tapBlock];
+    return [self td_showAlertViewWithTitle:title message:message style:UIAlertViewStyleDefault cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil tapBlock:tapBlock];
+}
+
+- (instancetype)td_show:(UIAlertViewCompletionBlock)tapBlock
+{
+  self.tapBlock = tapBlock;
+  self.delegate = (id)self;
+  [self show];
+  
+  return self;
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #pragma mark - Origin Ryan Maxwell
-+ (instancetype)showAlertViewWithTitle:(NSString *)title message:(NSString *)message style:(UIAlertViewStyle)style cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles tapBlock:(UIAlertViewCompletionBlock)tapBlock {
++ (instancetype)td_showAlertViewWithTitle:(NSString *)title message:(NSString *)message style:(UIAlertViewStyle)style cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles tapBlock:(UIAlertViewCompletionBlock)tapBlock {
     NSString *firstObject = otherButtonTitles.count ? otherButtonTitles[0] : nil;
     
     UIAlertView *alertView;

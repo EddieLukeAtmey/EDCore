@@ -35,20 +35,22 @@ typedef void (^UIAlertViewCompletionBlock) (UIAlertView *alertView, NSInteger bu
 
 #pragma mark - Add more by ThuyDao
 // Have not Style
-+ (instancetype)showAlertViewWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles tapBlock:(UIAlertViewCompletionBlock)tapBlock;
++ (instancetype)td_showAlertViewWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles tapBlock:(UIAlertViewCompletionBlock)tapBlock;
 
 // Have not Style - title
-+ (instancetype)showAlertViewWithMessage:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles tapBlock:(UIAlertViewCompletionBlock)tapBlock;
++ (instancetype)td_showAlertViewWithMessage:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles tapBlock:(UIAlertViewCompletionBlock)tapBlock;
 
 // Have not Style - title - other button
-+ (instancetype)showAlertViewWithMessage:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle tapBlock:(UIAlertViewCompletionBlock)tapBlock;
++ (instancetype)td_showAlertViewWithMessage:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle tapBlock:(UIAlertViewCompletionBlock)tapBlock;
 
 // Have not Style - other button
-+ (instancetype)showAlertViewWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle tapBlock:(UIAlertViewCompletionBlock)tapBlock;
++ (instancetype)td_showAlertViewWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle tapBlock:(UIAlertViewCompletionBlock)tapBlock;
+
+- (instancetype)td_show:(UIAlertViewCompletionBlock)tapBlock;
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #pragma mark - Origin Ryan Maxwell
-+ (instancetype)showAlertViewWithTitle:(NSString *)title message:(NSString *)message style:(UIAlertViewStyle)style cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles tapBlock:(UIAlertViewCompletionBlock)tapBlock;
++ (instancetype)td_showAlertViewWithTitle:(NSString *)title message:(NSString *)message style:(UIAlertViewStyle)style cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles tapBlock:(UIAlertViewCompletionBlock)tapBlock;
 
 @property (copy, nonatomic) UIAlertViewCompletionBlock tapBlock;
 @property (copy, nonatomic) UIAlertViewCompletionBlock willDismissBlock;

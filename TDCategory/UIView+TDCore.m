@@ -8,8 +8,22 @@
 //
 
 #import "UIView+TDCore.h"
+#import <objc/runtime.h>
+
+static const void *blockEventOfTDCoreVoid = &blockEventOfTDCoreVoid;
 @implementation UIView (TDCore)
 
+#pragma mark - Setter & Getter
+
+- (UIViewTDCoreBlock)blockEventOfTDCore
+{
+    return objc_getAssociatedObject(self, blockEventOfTDCoreVoid);
+}
+
+- (void)setBlockEventOfTDCore:(UIViewTDCoreBlock)blockEventOfTDCore
+{
+    objc_setAssociatedObject(self, blockEventOfTDCoreVoid, blockEventOfTDCore, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
 
 #pragma mark - Get UI
 - (id)td_safeWithTag:(NSInteger )tag
@@ -342,6 +356,18 @@
     [self.superview addSubview:button];
 }
 
+- (void)td_addButtonwithX:(CGFloat )x withY:(CGFloat )y withWidth:(CGFloat )width withHeight:(CGFloat )height
+{
+    CGRect frame = CGRectMake(x, y, width, height);
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setFrame:frame];
+    [button setBackgroundColor:[UIColor clearColor]];
+    [button addTarget:self action:@selector(eventOfButton:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.superview addSubview:button];
+}
+
 - (void)td_addButtonAtCenterWithTarget:(id )target withAction:(SEL )action
 {
     [self td_addButtonAtCenterWithTarget:target withAction:action withSize:CGSizeMake(30.0, 30.0)];
@@ -365,6 +391,27 @@
     CGFloat y = self.center.y - (height / 2);
     
     [self td_addButtonWithTarget:target action:action withX:x withY:y withWidth:width withHeight:height];
+}
+
+- (void)td_addButtonAtCenterWithBlock:(UIViewTDCoreBlock)block withSize:(CGSize)size
+{
+    self.blockEventOfTDCore = block;
+    CGFloat width = size.width;
+    if ( self.frame.size.width > width )
+    {
+        width = self.frame.size.width;
+    }
+    
+    CGFloat height = size.height;
+    if ( self.frame.size.height > height )
+    {
+        height = self.frame.size.height;
+    }
+    
+    CGFloat x = self.center.x - (width / 2);
+    CGFloat y = self.center.y - (height / 2);
+    
+    [self td_addButtonwithX:x withY:y withWidth:width withHeight:height];
 }
 
 #pragma mark - Add button - Other
@@ -456,6 +503,13 @@
     CGFloat y = self.frame.origin.y + self.frame.size.height;
     
     [self td_addButtonWithTarget:target action:action withX:x withY:y withSize:size];
+}
+
+- (void)eventOfButton:(UIButton *)sender
+{
+    if (self.blockEventOfTDCore) {
+        self.blockEventOfTDCore();
+    }
 }
 
 @end

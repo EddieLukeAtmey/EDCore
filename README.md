@@ -1,9 +1,10 @@
-# EDCore
+# TDCore
 <<<<<<< HEAD
 
-[![Version](https://img.shields.io/cocoapods/v/EDCore.svg?style=flat)](http://cocoapods.org/pods/EDCore)
-[![License](https://img.shields.io/cocoapods/l/EDCore.svg?style=flat)](http://cocoapods.org/pods/EDCore)
-[![Platform](https://img.shields.io/cocoapods/p/EDCore.svg?style=flat)](http://cocoapods.org/pods/EDCore)
+[![CI Status](http://img.shields.io/travis/Thuỷ Đào/TDCore.svg?style=flat)](https://travis-ci.org/Thuỷ Đào/TDCore)
+[![Version](https://img.shields.io/cocoapods/v/TDCore.svg?style=flat)](http://cocoapods.org/pods/TDCore)
+[![License](https://img.shields.io/cocoapods/l/TDCore.svg?style=flat)](http://cocoapods.org/pods/TDCore)
+[![Platform](https://img.shields.io/cocoapods/p/TDCore.svg?style=flat)](http://cocoapods.org/pods/TDCore)
 
 ## Usage
 
@@ -13,20 +14,20 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-EDCore is available through [CocoaPods](http://cocoapods.org). To install
+TDCore is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "EDCore"
+pod "TDCore"
 ```
 
 ## Author
 
-Eddie Luke Atmey, eddie.marvin116@gmail.com
+Thuỷ Đào, thuydd@smartosc.com
 
 ## License
 
-EDCore is available under the MIT license. See the LICENSE file for more info.
+TDCore is available under the MIT license. See the LICENSE file for more info.
 =======
-Copyright @ Eddie Luke Atmey
+Copyright @ Thuỷ Đào
 >>>>>>> 11524447be7ea8a7757ff65614cce57b6e6c014e

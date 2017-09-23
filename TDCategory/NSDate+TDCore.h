@@ -1,8 +1,10 @@
 //
-//  NSDate+TDCore.h
-//  EDCore
+//  NSDate+Core.h
+//  test
 //
-//  Created by Eddie Luke Atmey on 09/23/17.
+//  Created by Dao Duy Thuy on 4/14/14.
+//  Copyright BunLV 2014. All rights reserved.
+//  Provider : Dao Duy Thuy
 //
 
 #import <Foundation/Foundation.h>

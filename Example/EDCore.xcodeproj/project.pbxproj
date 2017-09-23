@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1285A639631C5DC89979942E /* Pods_EDCore_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECE662A79E7D4FCE42F53CE /* Pods_EDCore_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -16,11 +17,15 @@
 		6003F5A7195388D20070C39A /* TDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* TDViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		DFED0ACDA99243C8BBE49363 /* Pods_EDCore_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2255159AFE4D65CA5C2E81 /* Pods_EDCore_Example.framework */; };
+		9906FCF61B7A60A300CB05A0 /* TestMultiDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9906FCF51B7A60A300CB05A0 /* TestMultiDelegate.m */; };
+		9906FCF91B7A614B00CB05A0 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9906FCF81B7A614B00CB05A0 /* TestModel.m */; };
+		9980C8371BBBCF560013F194 /* Main1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9980C8361BBBCF560013F194 /* Main1.storyboard */; };
+		9980C8391BBBCFA90013F194 /* TestPlistStoryboard.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9980C8381BBBCFA90013F194 /* TestPlistStoryboard.plist */; };
+		9980C83C1BBBCFE80013F194 /* TDViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 9980C83B1BBBCFE80013F194 /* TDViewController1.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		427215221247ADF8CAF135A5 /* Pods-EDCore_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EDCore_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-EDCore_Example/Pods-EDCore_Example.release.xcconfig"; sourceTree = "<group>"; };
+		1A65651B3DEF29C73772D29B /* Pods-EDCore_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EDCore_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EDCore_Example/Pods-EDCore_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* EDCore_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EDCore_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -34,12 +39,19 @@
 		6003F5A5195388D20070C39A /* TDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDViewController.h; sourceTree = "<group>"; };
 		6003F5A6195388D20070C39A /* TDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		7A9672D27136B996C73C66EA /* EDCore.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EDCore.podspec; path = ../EDCore.podspec; sourceTree = "<group>"; };
-		7B2255159AFE4D65CA5C2E81 /* Pods_EDCore_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EDCore_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8ECE662A79E7D4FCE42F53CE /* Pods_EDCore_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EDCore_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9906FCF41B7A60A300CB05A0 /* TestMultiDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMultiDelegate.h; sourceTree = "<group>"; };
+		9906FCF51B7A60A300CB05A0 /* TestMultiDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMultiDelegate.m; sourceTree = "<group>"; };
+		9906FCF71B7A614B00CB05A0 /* TestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
+		9906FCF81B7A614B00CB05A0 /* TestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
+		9980C8361BBBCF560013F194 /* Main1.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main1.storyboard; sourceTree = "<group>"; };
+		9980C8381BBBCFA90013F194 /* TestPlistStoryboard.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestPlistStoryboard.plist; sourceTree = "<group>"; };
+		9980C83A1BBBCFE80013F194 /* TDViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDViewController1.h; sourceTree = "<group>"; };
+		9980C83B1BBBCFE80013F194 /* TDViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDViewController1.m; sourceTree = "<group>"; };
 		B674172BFC86E4F0BE35703D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		D0A9C1BA54407241AEC741A9 /* Pods-EDCore_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EDCore_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EDCore_Example/Pods-EDCore_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		D12C849071940F86AEACBC44 /* Pods-EDCore_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EDCore_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-EDCore_Example/Pods-EDCore_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F94F5576D039EDF6F22995C6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,7 +63,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				DFED0ACDA99243C8BBE49363 /* Pods_EDCore_Example.framework in Frameworks */,
+				1285A639631C5DC89979942E /* Pods_EDCore_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
-				6003F593195388D20070C39A /* Example for EDCore */,
+				6003F593195388D20070C39A /* Example for TDCore */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				8AB5AEE584BDC2CFF94F973D /* Pods */,
@@ -83,24 +95,31 @@
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
-				6003F5AF195388D20070C39A /* XCTest.framework */,
-				7B2255159AFE4D65CA5C2E81 /* Pods_EDCore_Example.framework */,
+				8ECE662A79E7D4FCE42F53CE /* Pods_EDCore_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6003F593195388D20070C39A /* Example for EDCore */ = {
+		6003F593195388D20070C39A /* Example for TDCore */ = {
 			isa = PBXGroup;
 			children = (
+				6003F5A8195388D20070C39A /* Images.xcassets */,
+				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				9980C8361BBBCF560013F194 /* Main1.storyboard */,
+				6003F594195388D20070C39A /* Supporting Files */,
 				6003F59C195388D20070C39A /* TDAppDelegate.h */,
 				6003F59D195388D20070C39A /* TDAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* TDViewController.h */,
 				6003F5A6195388D20070C39A /* TDViewController.m */,
-				6003F5A8195388D20070C39A /* Images.xcassets */,
-				6003F594195388D20070C39A /* Supporting Files */,
+				9906FCF71B7A614B00CB05A0 /* TestModel.h */,
+				9906FCF81B7A614B00CB05A0 /* TestModel.m */,
+				9906FCF41B7A60A300CB05A0 /* TestMultiDelegate.h */,
+				9906FCF51B7A60A300CB05A0 /* TestMultiDelegate.m */,
+				9980C8381BBBCFA90013F194 /* TestPlistStoryboard.plist */,
+				9980C83A1BBBCFE80013F194 /* TDViewController1.h */,
+				9980C83B1BBBCFE80013F194 /* TDViewController1.m */,
 			);
-			name = "Example for EDCore";
+			name = "Example for TDCore";
 			path = EDCore;
 			sourceTree = "<group>";
 		};
@@ -128,8 +147,8 @@
 		8AB5AEE584BDC2CFF94F973D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D0A9C1BA54407241AEC741A9 /* Pods-EDCore_Example.debug.xcconfig */,
-				427215221247ADF8CAF135A5 /* Pods-EDCore_Example.release.xcconfig */,
+				1A65651B3DEF29C73772D29B /* Pods-EDCore_Example.debug.xcconfig */,
+				D12C849071940F86AEACBC44 /* Pods-EDCore_Example.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -163,9 +182,9 @@
 		6003F582195388D10070C39A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = ED;
+				CLASSPREFIX = TD;
 				LastUpgradeCheck = 0900;
-				ORGANIZATIONNAME = EddieLucky;
+				ORGANIZATIONNAME = "Thuỷ Đào";
 			};
 			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "EDCore" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -190,7 +209,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9980C8391BBBCFA90013F194 /* TestPlistStoryboard.plist in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				9980C8371BBBCF560013F194 /* Main1.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
@@ -239,10 +260,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-EDCore_Example/Pods-EDCore_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AutoCoding/AutoCoding.framework",
 				"${BUILT_PRODUCTS_DIR}/EDCore/EDCore.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AutoCoding.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EDCore.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,8 +280,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9906FCF61B7A60A300CB05A0 /* TestMultiDelegate.m in Sources */,
+				9906FCF91B7A614B00CB05A0 /* TestModel.m in Sources */,
 				6003F59E195388D20070C39A /* TDAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* TDViewController.m in Sources */,
+				9980C83C1BBBCFE80013F194 /* TDViewController1.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +330,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -322,6 +349,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = mh_execute;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -355,6 +383,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -366,6 +395,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = mh_execute;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -374,16 +404,19 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0A9C1BA54407241AEC741A9 /* Pods-EDCore_Example.debug.xcconfig */;
+			baseConfigurationReference = 1A65651B3DEF29C73772D29B /* Pods-EDCore_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EDCore/EDCore-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/EDCore/EDCore-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = mh_dylib;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.EDCore-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -391,16 +424,19 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 427215221247ADF8CAF135A5 /* Pods-EDCore_Example.release.xcconfig */;
+			baseConfigurationReference = D12C849071940F86AEACBC44 /* Pods-EDCore_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EDCore/EDCore-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/EDCore/EDCore-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = mh_dylib;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.EDCore-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

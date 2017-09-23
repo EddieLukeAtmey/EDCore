@@ -22,17 +22,11 @@
 @interface NSString (Validate)
 
 - (BOOL)td_isEmpty;
-
-
 - (BOOL)td_isValidEmail;
-
-
 - (BOOL)td_isValidPassword;
-
-
 - (BOOL)td_isValidTelephone;
-
 - (BOOL)td_validateUrl;
+- (BOOL)td_isValidWithRegex:(NSString *)regex;
 
 @end
 

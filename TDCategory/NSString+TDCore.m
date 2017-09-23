@@ -56,6 +56,12 @@
     return [urlTest evaluateWithObject:self];
 }
 
+- (BOOL)td_isValidWithRegex:(NSString *)regex
+{
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    
+    return [emailTest evaluateWithObject:self];
+}
 
 @end
 

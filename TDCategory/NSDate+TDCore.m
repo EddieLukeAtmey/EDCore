@@ -1,17 +1,19 @@
 //
-//  NSDate+TDCore.m
-//  EDCore
+//  NSDate+Core.m
+//  test
 //
-//  Created by Eddie Luke Atmey on 09/23/17.
+//  Created by Dao Duy Thuy on 4/14/14.
+//  Copyright BunLV 2014. All rights reserved.
+//  Provider : Dao Duy Thuy
 //
 
 #import "NSDate+TDCore.h"
 
-#define D_MINUTE    60
-#define D_HOUR        3600
-#define D_DAY        86400
-#define D_WEEK        604800
-#define D_YEAR        31556926
+#define D_MINUTE	60
+#define D_HOUR		3600
+#define D_DAY		86400
+#define D_WEEK		604800
+#define D_YEAR		31556926
 
 #define DATE_COMPONENTS (NSCalendarUnitYear| NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekday |  NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitWeekday | NSCalendarUnitWeekdayOrdinal)
 #define CURRENT_CALENDAR [NSCalendar currentCalendar]
@@ -101,10 +103,10 @@
 {
     NSDateComponents *components1 = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
     NSDateComponents *components2 = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:aDate];
-
+    
     // Must be same week. 12/31 and 1/1 will both be week "1" if they are in the same week
     if (components1.weekOfMonth != components2.weekOfMonth)return NO;
-
+    
     // Must have a time interval under 1 week. Thanks @aclark
     int values = fabs([self timeIntervalSinceDate:aDate]);
     return (values < D_WEEK );
@@ -160,7 +162,7 @@
 {
     NSDateComponents *components1 = [CURRENT_CALENDAR components:NSCalendarUnitYear fromDate:self];
     NSDateComponents *components2 = [CURRENT_CALENDAR components:NSCalendarUnitYear fromDate:[NSDate date]];
-
+    
     return (components1.year == (components2.year + 1));
 }
 
@@ -168,7 +170,7 @@
 {
     NSDateComponents *components1 = [CURRENT_CALENDAR components:NSCalendarUnitYear fromDate:self];
     NSDateComponents *components2 = [CURRENT_CALENDAR components:NSCalendarUnitYear fromDate:[NSDate date]];
-
+    
     return (components1.year == (components2.year - 1));
 }
 
@@ -380,7 +382,7 @@
     [dateFormat setDateFormat:@"MM/dd/yyyy"];
     [dateFormat setTimeZone:[NSTimeZone systemTimeZone]];
     NSString *dateString = [dateFormat stringFromDate:aDate];
-
+    
     return (dateString);
 }
 
@@ -390,7 +392,7 @@
     [dateFormat setDateFormat:format];
     [dateFormat setTimeZone:[NSTimeZone systemTimeZone]];
     NSString *dateString = [dateFormat stringFromDate:self];
-
+    
     return (dateString);
 }
 
@@ -400,7 +402,7 @@
     [dateFormat setDateFormat:@"yyyy-MM-dd"];
     [dateFormat setTimeZone:[NSTimeZone systemTimeZone]];
     NSString *dateString = [dateFormat stringFromDate:[NSDate date]];
-
+    
     return (dateString);
 }
 
@@ -411,7 +413,7 @@
     [dateFormat setDateFormat:@"dd-MMMM-yyyy"];
     [dateFormat setTimeZone:[NSTimeZone systemTimeZone]];
     NSString *dateString = [dateFormat stringFromDate:aDate];
-
+    
     return (dateString);
 }
 
@@ -420,11 +422,11 @@
     dateFormatter.dateFormat = @"yyyy-MM-dd";
     [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
     NSDate *serverDate = [dateFormatter dateFromString:sServerDate];
-
+    
     [dateFormatter setDateFormat:@"dd-MMMM-yyyy"];
     [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
     NSString *sDislayDate = [dateFormatter stringFromDate:serverDate];
-
+    
     return sDislayDate;
 }
 
@@ -434,11 +436,11 @@
     dateFormatter.dateFormat = @"dd-MMMM-yyyy";
     [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
     NSDate *dislayDate = [dateFormatter dateFromString:sDislayDate];
-
+    
     [dateFormatter setDateFormat:@"yyyy-MM-dd"];
     [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
     NSString *sServerDate = [dateFormatter stringFromDate:dislayDate];
-
+    
     return sServerDate;
 }
 
@@ -447,25 +449,25 @@
     dateFormatter.dateFormat = @"MM/dd/yyyy";
     [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
     NSDate *faceDate = [dateFormatter dateFromString:sFaceDate];
-
+    
     [dateFormatter setDateFormat:@"dd-MMMM-yyyy"];
     [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
     NSString *sDislayDate = [dateFormatter stringFromDate:faceDate];
-
+    
     return sDislayDate;
 }
 
 - (NSString *)td_stringDateFromRegisterToDisplayTarget:(NSString *)sDisplayDate
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-
+    
     dateFormatter.dateFormat = @"dd-MM-yyyy";
     [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
     NSDate *displayDate = [dateFormatter dateFromString:sDisplayDate];
-
+    
     [dateFormatter setDateFormat:@"mm-dd-yyyy"];
     [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
-
+    
     return [dateFormatter stringFromDate:displayDate];
 }
 
@@ -475,18 +477,18 @@
 + (NSString *)td_stringDateFromDisplayToServerMyProfile:(NSString *)strDisplay
 {
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-
+    
     // Format display
     [dateFormat setDateFormat:@"dd-MMMM-yyyy"];
     [dateFormat setTimeZone:[NSTimeZone systemTimeZone]];
-
+    
     // Convert string to date display
     NSDate *dateDisplay = [dateFormat dateFromString:strDisplay];
-
+    
     // Format send to server
     [dateFormat setDateFormat:@"yyyy-MM-dd"];
     [dateFormat setTimeZone:[NSTimeZone systemTimeZone]];
-
+    
     return [dateFormat stringFromDate:dateDisplay];
 }
 
@@ -498,7 +500,7 @@
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"MM-dd-yyyy hh:mm aaa"];
     [dateFormat setTimeZone:[NSTimeZone systemTimeZone]];
-
+    
     return [dateFormat stringFromDate:self];
 }
 
@@ -510,7 +512,7 @@
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"dd-MMMM-yyyy"];
     [dateFormat setTimeZone:[NSTimeZone systemTimeZone]];
-
+    
     return [dateFormat stringFromDate:self];
 }
 
@@ -520,9 +522,8 @@
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:format];
     [dateFormat setTimeZone:[NSTimeZone systemTimeZone]];
-
+    
     return [dateFormat dateFromString:str];
 }
 
 @end
-
