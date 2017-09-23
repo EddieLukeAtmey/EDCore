@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1285A639631C5DC89979942E /* Pods_EDCore_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECE662A79E7D4FCE42F53CE /* Pods_EDCore_Example.framework */; };
+		11748B5A13D3F44AE812C3FA /* Pods_EDCore_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFE5623A5DAA2B4D472CF5F /* Pods_EDCore_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -41,7 +41,6 @@
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7A9672D27136B996C73C66EA /* EDCore.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EDCore.podspec; path = ../EDCore.podspec; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		8ECE662A79E7D4FCE42F53CE /* Pods_EDCore_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EDCore_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9906FCF41B7A60A300CB05A0 /* TestMultiDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMultiDelegate.h; sourceTree = "<group>"; };
 		9906FCF51B7A60A300CB05A0 /* TestMultiDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMultiDelegate.m; sourceTree = "<group>"; };
 		9906FCF71B7A614B00CB05A0 /* TestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		9980C83B1BBBCFE80013F194 /* TDViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDViewController1.m; sourceTree = "<group>"; };
 		B674172BFC86E4F0BE35703D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D12C849071940F86AEACBC44 /* Pods-EDCore_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EDCore_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-EDCore_Example/Pods-EDCore_Example.release.xcconfig"; sourceTree = "<group>"; };
+		EAFE5623A5DAA2B4D472CF5F /* Pods_EDCore_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EDCore_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F94F5576D039EDF6F22995C6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,7 +63,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				1285A639631C5DC89979942E /* Pods_EDCore_Example.framework in Frameworks */,
+				11748B5A13D3F44AE812C3FA /* Pods_EDCore_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +95,7 @@
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
-				8ECE662A79E7D4FCE42F53CE /* Pods_EDCore_Example.framework */,
+				EAFE5623A5DAA2B4D472CF5F /* Pods_EDCore_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

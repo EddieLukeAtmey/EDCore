@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
     s.version          = "1.0"
     s.summary          = "EDCore is a iOS framework. You have beauty project and stable. It will down time development for you"
     s.description      = "EDCore allows configure & create base to any iOS Project. Below are services needed to be implement basic funtion. so it's help to you can write short code and meanable. So you will the clear source code"
-    s.homepage         = "https://github.com/EddieLukeAtmey/ELCore"
+    s.homepage         = "https://github.com/EddieLukeAtmey/EDCore"
     # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
     s.license          = 'MIT'
     s.author           = { "Eddie Luke Atmey" => "eddie.marvin116@gmail.com" }
@@ -29,10 +29,6 @@ Pod::Spec.new do |s|
     ss.source_files = 'TDCategory/*'
     end
 
-    s.subspec 'TDEngineLog' do |ss|
-    ss.source_files = 'TDEngineLog/*'
-    end
-
     s.subspec 'TDEvent' do |ss|
     ss.source_files = 'TDEvent/*'
     end
@@ -45,12 +41,18 @@ Pod::Spec.new do |s|
     ss.source_files = 'TDUtils/*'
     end
 
+    s.subspec 'TDCustomView' do |ss|
+    ss.source_files = 'TDCustomView/**/*'
+    #ss.public_header_files = 'TDCustomView/**/*.h'
+
+    end
+
     s.resource_bundles = {
     'EDCore' => ['Resources/**/*.{png,xib,storyboad}']
     }
 
 
-    s.public_header_files = 'TDCore/TDCore.h','TDCore/*.h','TDCategory/*.h','TDEvent/*.h','TDPopup/*.h','TDUtils/*.h','UITableViewDragLoad/**/*.h'
+    s.public_header_files = 'EDCore/*.h','TDCategory/*.h','TDEvent/*.h','TDPopup/*.h','TDUtils/*.h'
     # s.frameworks = 'UIKit', 'MapKit'
     s.dependency 'AutoCoding'
 

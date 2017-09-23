@@ -149,7 +149,7 @@
 #pragma mark - Category Util
 @interface TDBaseViewController (Util)
 
-- (void)td_delay:(CGFloat)secs completed:(void (^) ())completed;
+- (void)td_delay:(CGFloat)secs completed:(void (^)())completed;
 - (UIView *)td_getViewFromXib:(NSString *)nameXib index:(NSInteger )index;
 
 @end

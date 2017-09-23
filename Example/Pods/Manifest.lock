@@ -3,11 +3,14 @@ PODS:
   - EDCore (1.0):
     - AutoCoding
     - EDCore/TDCategory (= 1.0)
+    - EDCore/TDCustomView (= 1.0)
     - EDCore/TDEngineLog (= 1.0)
     - EDCore/TDEvent (= 1.0)
     - EDCore/TDPopup (= 1.0)
     - EDCore/TDUtils (= 1.0)
   - EDCore/TDCategory (1.0):
+    - AutoCoding
+  - EDCore/TDCustomView (1.0):
     - AutoCoding
   - EDCore/TDEngineLog (1.0):
     - AutoCoding
@@ -27,7 +30,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AutoCoding: 56fa46dbfa89d44189a26ce64e6a470ed8ff4661
-  EDCore: 66180f4201b2c0f6f625d789b4936b170ffa4415
+  EDCore: adf0c2f0f9e1aa14b4a2948133208956a64373ce
 
 PODFILE CHECKSUM: 8911b63856036c7398168e7d29423d619cae9c3d
 

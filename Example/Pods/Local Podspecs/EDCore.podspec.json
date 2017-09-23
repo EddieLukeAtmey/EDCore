@@ -3,7 +3,7 @@
   "version": "1.0",
   "summary": "EDCore is a iOS framework. You have beauty project and stable. It will down time development for you",
   "description": "EDCore allows configure & create base to any iOS Project. Below are services needed to be implement basic funtion. so it's help to you can write short code and meanable. So you will the clear source code",
-  "homepage": "https://github.com/EddieLukeAtmey/ELCore",
+  "homepage": "https://github.com/EddieLukeAtmey/EDCore",
   "license": "MIT",
   "authors": {
     "Eddie Luke Atmey": "eddie.marvin116@gmail.com"
@@ -30,13 +30,11 @@
     ]
   },
   "public_header_files": [
-    "TDCore/TDCore.h",
-    "TDCore/*.h",
+    "EDCore/*.h",
     "TDCategory/*.h",
     "TDEvent/*.h",
     "TDPopup/*.h",
-    "TDUtils/*.h",
-    "UITableViewDragLoad/**/*.h"
+    "TDUtils/*.h"
   ],
   "dependencies": {
     "AutoCoding": [
@@ -63,6 +61,10 @@
     {
       "name": "TDUtils",
       "source_files": "TDUtils/*"
+    },
+    {
+      "name": "TDCustomView",
+      "source_files": "TDCustomView/**/*"
     }
   ]
 }
