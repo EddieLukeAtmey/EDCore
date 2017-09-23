@@ -37,6 +37,8 @@
 		A43E014FB633F3B3E7B74136F5D4A0BB /* UIViewController+TDLog.h in Headers */ = {isa = PBXBuildFile; fileRef = AA96E23B030F52045AB9A8246EFBC488 /* UIViewController+TDLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA5C552392FAC0DC868E1511D2E91BB9 /* UIScrollView+TDCore.h in Headers */ = {isa = PBXBuildFile; fileRef = E8AFC549AC07689B8163A6B752F56EDF /* UIScrollView+TDCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1D20A791A67B9F9B22EF0C7B68BD298 /* NSObject+File.h in Headers */ = {isa = PBXBuildFile; fileRef = FC585A00AF9C5D29CF5B5A7EF93A6951 /* NSObject+File.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B24A137F1F76BF82006ABEF2 /* NSDate+TDCore.h in Headers */ = {isa = PBXBuildFile; fileRef = B24A137D1F76BF82006ABEF2 /* NSDate+TDCore.h */; };
+		B24A13801F76BF82006ABEF2 /* NSDate+TDCore.m in Sources */ = {isa = PBXBuildFile; fileRef = B24A137E1F76BF82006ABEF2 /* NSDate+TDCore.m */; };
 		B4C57A38F49EDF60B7964C05C3C63649 /* TDAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD088DC4AE2E44E1DFBCA407886DB6F /* TDAlert.m */; };
 		B8B5036B650C4DF9C62E39FCE456065F /* TDEngineLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D3E34ADFD36BAC15B3A059F532B40CE /* TDEngineLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C102CF4580A90DB6D1186F3D1908ED5A /* TDBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 89CB25CD67AC329B6799A707136DC39B /* TDBaseViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -92,7 +94,7 @@
 		2F19431823C2C925A3FEF359D7838DD5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3865B7FCFE704662CB3DEBBB12EC2FBF /* NSObject+File.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+File.m"; path = "TDEngineLog/NSObject+File.m"; sourceTree = "<group>"; };
 		44CCE9BF5E527D332711EC0234E36F96 /* UIView+TDEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+TDEvent.h"; path = "TDEvent/UIView+TDEvent.h"; sourceTree = "<group>"; };
-		4521D2D643B300F515E9D7D419E68CAD /* Pods-EDCore_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-EDCore_Example.modulemap"; sourceTree = "<group>"; };
+		4521D2D643B300F515E9D7D419E68CAD /* Pods-EDCore_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-EDCore_Example.modulemap"; sourceTree = "<group>"; };
 		48E9319F206148BFBEB9F6CBCCA2ED7A /* UIView+TDCore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+TDCore.m"; path = "TDCategory/UIView+TDCore.m"; sourceTree = "<group>"; };
 		5052EACB9AF8EADAB5861BDFB384DA61 /* UIButton+TDEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+TDEvent.m"; path = "TDEvent/UIButton+TDEvent.m"; sourceTree = "<group>"; };
 		60E125AAC4BB574326D4716D07EBC18A /* UIScrollView+TDCore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+TDCore.m"; path = "TDCategory/UIScrollView+TDCore.m"; sourceTree = "<group>"; };
@@ -101,19 +103,21 @@
 		66B28A9174CCBD34BFCF554B73132B52 /* UIViewController+Popup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Popup.h"; path = "TDPopup/UIViewController+Popup.h"; sourceTree = "<group>"; };
 		66C2E79D3799EC9BFA6C4CC8BCD2C9C5 /* NSDictionary+TDCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+TDCore.h"; path = "TDCategory/NSDictionary+TDCore.h"; sourceTree = "<group>"; };
 		71AD85C28A3FE5F8C5F85B97580670A8 /* blueArrow@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "blueArrow@2x.png"; path = "Assets/blueArrow@2x.png"; sourceTree = "<group>"; };
-		8140F520570B7D10A67E28EC9F2D1779 /* TDCore.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TDCore.bundle; path = TDCore.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		8140F520570B7D10A67E28EC9F2D1779 /* TDCore.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDCore.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		878398E097C5F71BAF1346C8FF74842A /* UIAlertView+Block.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+Block.m"; path = "TDEvent/UIAlertView+Block.m"; sourceTree = "<group>"; };
 		88596A30ACB98426EC02A0ED8400C42A /* TDBaseObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TDBaseObject.m; path = TDUtils/TDBaseObject.m; sourceTree = "<group>"; };
 		89CB25CD67AC329B6799A707136DC39B /* TDBaseViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TDBaseViewController.h; path = EDCore/TDBaseViewController.h; sourceTree = "<group>"; };
 		8A176217793303A7518822251742D282 /* EDCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EDCore.h; path = EDCore/EDCore.h; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A3B6857FC3C0A7314A616229BA6995DC /* EDCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EDCore.framework; path = EDCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A3B6857FC3C0A7314A616229BA6995DC /* EDCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EDCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A484BEDE985AD58D86D732B66347334F /* blueArrow.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = blueArrow.png; path = Assets/blueArrow.png; sourceTree = "<group>"; };
 		AA96E23B030F52045AB9A8246EFBC488 /* UIViewController+TDLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+TDLog.h"; path = "TDEngineLog/UIViewController+TDLog.h"; sourceTree = "<group>"; };
 		AB1D290A6D4C6528A8618198C24202D0 /* NSString+TDCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+TDCore.h"; path = "TDCategory/NSString+TDCore.h"; sourceTree = "<group>"; };
 		ACD088DC4AE2E44E1DFBCA407886DB6F /* TDAlert.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TDAlert.m; path = TDUtils/TDAlert.m; sourceTree = "<group>"; };
 		AE557FE32D3DB72CD1E2DD4CD01472B2 /* UIColor+TDCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+TDCore.h"; path = "TDCategory/UIColor+TDCore.h"; sourceTree = "<group>"; };
 		AFB88EA4A80108E46E85C65D74D1B214 /* UIViewController+TDLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+TDLog.m"; path = "TDEngineLog/UIViewController+TDLog.m"; sourceTree = "<group>"; };
+		B24A137D1F76BF82006ABEF2 /* NSDate+TDCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSDate+TDCore.h"; path = "TDCategory/NSDate+TDCore.h"; sourceTree = "<group>"; };
+		B24A137E1F76BF82006ABEF2 /* NSDate+TDCore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSDate+TDCore.m"; path = "TDCategory/NSDate+TDCore.m"; sourceTree = "<group>"; };
 		B3BAF96F7035A6C479C5A18714F972ED /* NSDictionary+TDCore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+TDCore.m"; path = "TDCategory/NSDictionary+TDCore.m"; sourceTree = "<group>"; };
 		B821DA589840F9A2A276E13B9A617F2A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA2681483BBF09E6A6E562DED06875BA /* Pods-EDCore_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EDCore_Example-dummy.m"; sourceTree = "<group>"; };
@@ -121,13 +125,13 @@
 		BCAAD7D79BD389133191F9ACAA2C4054 /* Pods-EDCore_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EDCore_Example-umbrella.h"; sourceTree = "<group>"; };
 		BF1399CEB3D0F327F93CE60F2650CE3E /* EDCore-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EDCore-prefix.pch"; sourceTree = "<group>"; };
 		C14147A9747AE0A96633BEEF2020A862 /* TDLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TDLog.h; path = TDEngineLog/TDLog.h; sourceTree = "<group>"; };
-		C8BB2DA0F34CDDF4FDAB1E780E790242 /* Pods_EDCore_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EDCore_Example.framework; path = "Pods-EDCore_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8BB2DA0F34CDDF4FDAB1E780E790242 /* Pods_EDCore_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EDCore_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCC4263693CEFD820F87C4C02DE9A25D /* loading-icon-rotating@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-icon-rotating@2x.png"; path = "Assets/loading-icon-rotating@2x.png"; sourceTree = "<group>"; };
 		CE34BB091952530496BD26469D9A6AB0 /* NSArray+TDCore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+TDCore.m"; path = "TDCategory/NSArray+TDCore.m"; sourceTree = "<group>"; };
 		D02FD1035EC042EC735D151E386874D7 /* TDAlert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TDAlert.h; path = TDUtils/TDAlert.h; sourceTree = "<group>"; };
 		D4C0E838E99C442735C69B8217DB1063 /* UIView+TDEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+TDEvent.m"; path = "TDEvent/UIView+TDEvent.m"; sourceTree = "<group>"; };
 		E0BCD66A3812A7FC7682E08D4F51A490 /* EDCore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EDCore-umbrella.h"; sourceTree = "<group>"; };
-		E48B0A056E05CBCB5BF5039809D2B6C8 /* EDCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = EDCore.modulemap; sourceTree = "<group>"; };
+		E48B0A056E05CBCB5BF5039809D2B6C8 /* EDCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EDCore.modulemap; sourceTree = "<group>"; };
 		E8AFC549AC07689B8163A6B752F56EDF /* UIScrollView+TDCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+TDCore.h"; path = "TDCategory/UIScrollView+TDCore.h"; sourceTree = "<group>"; };
 		E8BD616DB64C6246F4519117218EBF29 /* NSArray+TDCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+TDCore.h"; path = "TDCategory/NSArray+TDCore.h"; sourceTree = "<group>"; };
 		EBB858C4031BA161EE233465D82AA414 /* UIViewController+Popup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Popup.m"; path = "TDPopup/UIViewController+Popup.m"; sourceTree = "<group>"; };
@@ -284,6 +288,8 @@
 				60E125AAC4BB574326D4716D07EBC18A /* UIScrollView+TDCore.m */,
 				29AF3159120F94CF29A7D5CEEF93502F /* UIView+TDCore.h */,
 				48E9319F206148BFBEB9F6CBCCA2ED7A /* UIView+TDCore.m */,
+				B24A137D1F76BF82006ABEF2 /* NSDate+TDCore.h */,
+				B24A137E1F76BF82006ABEF2 /* NSDate+TDCore.m */,
 			);
 			name = TDCategory;
 			sourceTree = "<group>";
@@ -353,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5E635DC5D9BCE9DBE6C0CE6B02B848B /* EDCore-umbrella.h in Headers */,
+				B24A137F1F76BF82006ABEF2 /* NSDate+TDCore.h in Headers */,
 				A20DF34E8E83CBB8F7A586641A310D5F /* EDCore.h in Headers */,
 				1A6A735C0E61F9282D3857B6884E4470 /* NSArray+TDCore.h in Headers */,
 				CC301C2DF6CA238E9FFB15343CEB5F47 /* NSDictionary+TDCore.h in Headers */,
@@ -496,6 +503,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D69E6728BB04C79F58EEC576DBB43E43 /* EDCore-dummy.m in Sources */,
+				B24A13801F76BF82006ABEF2 /* NSDate+TDCore.m in Sources */,
 				DB72BF7E5BDB2AE9BA6AE84679993B87 /* NSArray+TDCore.m in Sources */,
 				C45CBE153D1393ADE17CD43614C632BF /* NSDictionary+TDCore.m in Sources */,
 				1D66EA05E5563654F8C5A0B7656D09BD /* NSObject+File.m in Sources */,
