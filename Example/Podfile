@@ -1,15 +1,18 @@
 source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '7.1'
+project 'EDCore'
 use_frameworks!
 
-target 'TDCore_Example', :exclusive => true do
-  pod "TDCore", :path => "../"
+target 'EDCore_Example' do
+  pod 'EDCore', :path => '../'
 end
 
-target 'TDCore_Tests', :exclusive => true do
-  pod "TDCore", :path => "../"
-
-  pod 'Specta'
-  pod 'Expecta'
-  pod 'FBSnapshotTestCase'
-  pod 'Expecta+Snapshots'
-end
+#target 'TDCore_Tests', :exclusive => true do
+#  pod "TDCore", :path => "../"
+#
+#  pod 'Specta'
+#  pod 'Expecta'
+#  pod 'FBSnapshotTestCase'
+#  pod 'Expecta+Snapshots'
+# end

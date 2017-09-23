@@ -1,0 +1,47 @@
+{
+  "name": "EDCore",
+  "version": "1.0.1",
+  "summary": "EDCore is a iOS framework. You have beauty project and stable. It will down time development for you",
+  "description": "EDCore allows configure & create base to any iOS Project. Below are services needed to be implement basic funtion. so it's help to you can write short code and meanable. So you will the clear source code",
+  "homepage": "https://github.com/EddieLukeAtmey/ELCore",
+  "license": "MIT",
+  "authors": {
+    "Eddie Luke Atmey": "eddie.marvin116@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/EddieLukeAtmey/EDCore",
+    "tag": "1.0.1"
+  },
+  "platforms": {
+    "ios": "6.0"
+  },
+  "requires_arc": true,
+  "source_files": "EDCore/*",
+  "resource_bundles": {
+    "TDCore": [
+      "Assets/*.png"
+    ]
+  },
+  "subspecs": [
+    {
+      "name": "TDCategory",
+      "source_files": "TDCategory/*"
+    },
+    {
+      "name": "TDEngineLog",
+      "source_files": "TDEngineLog/*"
+    },
+    {
+      "name": "TDEvent",
+      "source_files": "TDEvent/*"
+    },
+    {
+      "name": "TDPopup",
+      "source_files": "TDPopup/*"
+    },
+    {
+      "name": "TDUtils",
+      "source_files": "TDUtils/*"
+    }
+  ]
+}

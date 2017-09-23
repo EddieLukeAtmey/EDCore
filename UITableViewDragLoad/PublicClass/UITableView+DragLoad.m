@@ -42,9 +42,9 @@
     if (self.dragFooterView.isLoading)
     {
         [self.dragFooterView endLoading:self shouldChangeContentInset:NO];
-        if ([self.dragDelegate respondsToSelector:@selector(dragTableLoadMoreCanceled:)])
+        if ([self.el_dragDelegate respondsToSelector:@selector(dragTableLoadMoreCanceled:)])
         {
-            [self.dragDelegate dragTableLoadMoreCanceled:self];
+            [self.el_dragDelegate dragTableLoadMoreCanceled:self];
         }
     }
     [self callDelegateDidTriggerRefresh];
@@ -55,9 +55,9 @@
     if (self.dragHeaderView.isLoading)
     {
         [self.dragHeaderView endLoading:self shouldUpdateRefreshDate:NO shouldChangeContentInset:NO];
-        if ([self.dragDelegate respondsToSelector:@selector(dragTableRefreshCanceled:)])
+        if ([self.el_dragDelegate respondsToSelector:@selector(dragTableRefreshCanceled:)])
         {
-            [self.dragDelegate dragTableRefreshCanceled:self];
+            [self.el_dragDelegate dragTableRefreshCanceled:self];
         }
     }
     [self callDelegateDidTriggerLoadMode];
@@ -116,9 +116,9 @@
 
 #pragma mark - Delegate
 
-@dynamic dragDelegate;
+@dynamic el_dragDelegate;
 
-- (id<UITableViewDragLoadDelegate>)dragDelegate
+- (id<UITableViewDragLoadDelegate>)el_dragDelegate
 {
     return objc_getAssociatedObject(self, DRAG_DELEGATE_KEY);
 }
@@ -129,10 +129,10 @@
     [self deallocSwizz];
 }
 
-- (void)setDragDelegate:(id<UITableViewDragLoadDelegate>)dragDelegate refreshDatePermanentKey:(NSString *)refreshDatePermanentKey
+- (void)setDragDelegate:(id<UITableViewDragLoadDelegate>)el_dragDelegate refreshDatePermanentKey:(NSString *)refreshDatePermanentKey
 {
-    objc_setAssociatedObject(self, DRAG_DELEGATE_KEY, dragDelegate, OBJC_ASSOCIATION_ASSIGN);
-    if (dragDelegate)
+    objc_setAssociatedObject(self, DRAG_DELEGATE_KEY, el_dragDelegate, OBJC_ASSOCIATION_ASSIGN);
+    if (el_dragDelegate)
     {
         [self initSubViewsWithRefreshDatePermanentKey:refreshDatePermanentKey];
         static dispatch_once_t onceToken;
@@ -142,7 +142,7 @@
                                                             selector:@selector(deallocSwizz)];
         });
     }
-    if (!dragDelegate)
+    if (!el_dragDelegate)
     {
         [self destroySubViews];
     }
@@ -292,17 +292,17 @@
 
 - (void)callDelegateDidTriggerRefresh
 {
-    if ([self.dragDelegate respondsToSelector:@selector(dragTableDidTriggerRefresh:)])
+    if ([self.el_dragDelegate respondsToSelector:@selector(dragTableDidTriggerRefresh:)])
     {
-        [self.dragDelegate dragTableDidTriggerRefresh:self];
+        [self.el_dragDelegate dragTableDidTriggerRefresh:self];
     }
 }
 
 - (void)callDelegateDidTriggerLoadMode
 {
-    if ([self.dragDelegate respondsToSelector:@selector(dragTableDidTriggerLoadMore:)])
+    if ([self.el_dragDelegate respondsToSelector:@selector(dragTableDidTriggerLoadMore:)])
     {
-        [self.dragDelegate dragTableDidTriggerLoadMore:self];
+        [self.el_dragDelegate dragTableDidTriggerLoadMore:self];
     }
 }
 
@@ -313,7 +313,7 @@
 //Sub controls
 - (UIActivityIndicatorView *)headerLoadingIndicator
 {
-    if (self.dragDelegate)
+    if (self.el_dragDelegate)
     {
         return self.dragHeaderView.loadingIndicator;
     }
@@ -322,7 +322,7 @@
 
 - (UIActivityIndicatorView *)footerLoadingIndicator
 {
-    if (self.dragDelegate)
+    if (self.el_dragDelegate)
     {
         return self.dragFooterView.loadingIndicator;
     }
@@ -331,7 +331,7 @@
 
 - (UILabel *)headerLoadingStatusLabel
 {
-    if (self.dragDelegate)
+    if (self.el_dragDelegate)
     {
         return self.dragHeaderView.loadingStatusLabel;
     }
@@ -340,7 +340,7 @@
 
 - (UILabel *)headerRefreshDateLabel
 {
-    if (self.dragDelegate)
+    if (self.el_dragDelegate)
     {
         return self.dragHeaderView.refreshDateLabel;
     }
@@ -349,7 +349,7 @@
 
 - (UILabel *)footerLoadingStatusLabel
 {
-    if (self.dragDelegate)
+    if (self.el_dragDelegate)
     {
         return self.dragFooterView.loadingStatusLabel;
     }
@@ -358,7 +358,7 @@
 
 - (UIView *)headerBackgroundView
 {
-    if (self.dragDelegate)
+    if (self.el_dragDelegate)
     {
         return self.dragHeaderView.backgroundView;
     }
@@ -367,7 +367,7 @@
 
 - (UIView *)footerBackgroundView
 {
-    if (self.dragDelegate)
+    if (self.el_dragDelegate)
     {
         return self.dragFooterView.backgroundView;
     }

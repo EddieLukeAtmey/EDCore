@@ -1,6 +1,0 @@
-framework module TDCore {
-  umbrella header "Pods-TDCore_Example-TDCore-umbrella.h"
-
-  export *
-  module * { export * }
-}

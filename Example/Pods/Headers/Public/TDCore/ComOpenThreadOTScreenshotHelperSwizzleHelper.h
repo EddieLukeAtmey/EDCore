@@ -1,1 +1,0 @@
-../../../../../UITableViewDragLoad/PrivateClass/ComOpenThreadOTScreenshotHelperSwizzleHelper.h
