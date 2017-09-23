@@ -16,7 +16,11 @@ Pod::Spec.new do |s|
     # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
     s.license          = 'MIT'
     s.author           = { "Eddie Luke Atmey" => "eddie.marvin116@gmail.com" }
-    s.source           = { :git => 'https://github.com/EddieLukeAtmey/EDCore.git', :tag => s.version.to_s }
+
+# set source with specific tag (dev only)
+# s.source           = { :git => 'https://github.com/EddieLukeAtmey/EDCore.git', :tag => s.version.to_s }
+
+    s.source           = { :git => 'https://github.com/EddieLukeAtmey/EDCore.git'}
     # s.social_media_url = 'https://fb.com/Eddie.Something'
 
     s.platform     = :ios, '8.0'
