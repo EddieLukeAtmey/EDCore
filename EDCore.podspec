@@ -47,9 +47,10 @@ Pod::Spec.new do |s|
 
     end
 
-    s.resource_bundles = {
-    'EDCore' => ['Resources/**/*.{png,xib,storyboad}']
-    }
+    s.resources = 'Resources/**/*.{png,xib,storyboad}'
+#    s.resource_bundles = {
+#      'EDCore' => ['Resources/**/*.{png,xib,storyboad}']
+#    }
 
 
     s.public_header_files = 'EDCore/*.h','TDCategory/*.h','TDEvent/*.h','TDPopup/*.h','TDUtils/*.h'
