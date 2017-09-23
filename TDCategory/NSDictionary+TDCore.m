@@ -120,7 +120,7 @@
         return 0;
     }
     
-    return [object intValue];
+    return [object integerValue];
 }
 
 

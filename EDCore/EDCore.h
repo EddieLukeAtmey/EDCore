@@ -12,6 +12,7 @@
 
 #pragma mark - TDCategory
 #import "NSArray+TDCore.h"
+#import "NSDate+TDCore.h"
 #import "NSDictionary+TDCore.h"
 #import "NSString+TDCore.h"
 #import "UIColor+TDCore.h"
