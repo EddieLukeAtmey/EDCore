@@ -8,7 +8,6 @@
 
 
 #import "TDBaseViewController.h"
-#import "TDTableDataSourceDelegate.h"
 
 #pragma mark - TDCategory
 #import "NSArray+TDCore.h"
@@ -34,6 +33,3 @@
 #pragma mark - TDUtils
 #import "TDAlert.h"
 #import "TDBaseObject.h"
-
-#pragma mark - TableViewDragLoad
-#import "UITableView+DragLoad.h"
