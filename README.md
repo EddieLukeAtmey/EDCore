@@ -1,4 +1,4 @@
-# TDCore
+# EDCore
 <<<<<<< HEAD
 
 [![Version](https://img.shields.io/cocoapods/v/EDCore.svg?style=flat)](http://cocoapods.org/pods/EDCore)
@@ -13,7 +13,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-TDCore is available through [CocoaPods](http://cocoapods.org). To install
+EDCore is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
