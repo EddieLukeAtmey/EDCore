@@ -1,10 +1,9 @@
 # TDCore
 <<<<<<< HEAD
 
-[![CI Status](http://img.shields.io/travis/Thuỷ Đào/TDCore.svg?style=flat)](https://travis-ci.org/Thuỷ Đào/TDCore)
-[![Version](https://img.shields.io/cocoapods/v/TDCore.svg?style=flat)](http://cocoapods.org/pods/TDCore)
-[![License](https://img.shields.io/cocoapods/l/TDCore.svg?style=flat)](http://cocoapods.org/pods/TDCore)
-[![Platform](https://img.shields.io/cocoapods/p/TDCore.svg?style=flat)](http://cocoapods.org/pods/TDCore)
+[![Version](https://img.shields.io/cocoapods/v/EDCore.svg?style=flat)](http://cocoapods.org/pods/EDCore)
+[![License](https://img.shields.io/cocoapods/l/EDCore.svg?style=flat)](http://cocoapods.org/pods/EDCore)
+[![Platform](https://img.shields.io/cocoapods/p/EDCore.svg?style=flat)](http://cocoapods.org/pods/EDCore)
 
 ## Usage
 
@@ -18,16 +17,16 @@ TDCore is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "TDCore"
+pod "EDCore"
 ```
 
 ## Author
 
-Thuỷ Đào, thuydd@smartosc.com
+Eddie Luke Atmey, eddie.marvin116@gmail.com
 
 ## License
 
-TDCore is available under the MIT license. See the LICENSE file for more info.
+EDCore is available under the MIT license. See the LICENSE file for more info.
 =======
-Copyright @ Thuỷ Đào
+Copyright @ Eddie Luke Atmey
 >>>>>>> 11524447be7ea8a7757ff65614cce57b6e6c014e
