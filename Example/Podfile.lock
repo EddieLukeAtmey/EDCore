@@ -1,15 +1,15 @@
 PODS:
-  - EDCore (1.0.1):
-    - EDCore/TDCategory (= 1.0.1)
-    - EDCore/TDEngineLog (= 1.0.1)
-    - EDCore/TDEvent (= 1.0.1)
-    - EDCore/TDPopup (= 1.0.1)
-    - EDCore/TDUtils (= 1.0.1)
-  - EDCore/TDCategory (1.0.1)
-  - EDCore/TDEngineLog (1.0.1)
-  - EDCore/TDEvent (1.0.1)
-  - EDCore/TDPopup (1.0.1)
-  - EDCore/TDUtils (1.0.1)
+  - EDCore (1.0):
+    - EDCore/TDCategory (= 1.0)
+    - EDCore/TDEngineLog (= 1.0)
+    - EDCore/TDEvent (= 1.0)
+    - EDCore/TDPopup (= 1.0)
+    - EDCore/TDUtils (= 1.0)
+  - EDCore/TDCategory (1.0)
+  - EDCore/TDEngineLog (1.0)
+  - EDCore/TDEvent (1.0)
+  - EDCore/TDPopup (1.0)
+  - EDCore/TDUtils (1.0)
 
 DEPENDENCIES:
   - EDCore (from `../`)
@@ -19,7 +19,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  EDCore: 16a490b60626f2bc29e841c6207a56bb28f91bc8
+  EDCore: 9119a6ef08896131d2bd882c4c44486f484a8316
 
 PODFILE CHECKSUM: 3122691134eefd95b76e40b223738b1919a7defc
 

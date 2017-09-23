@@ -12,7 +12,6 @@
 
 #import "EDCore.h"
 #import "TDBaseViewController.h"
-#import "TDTableDataSourceDelegate.h"
 #import "NSArray+TDCore.h"
 #import "NSDictionary+TDCore.h"
 #import "NSString+TDCore.h"
