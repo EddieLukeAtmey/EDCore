@@ -10,7 +10,7 @@
 
 @interface UIResponder (TDPush)
 
-
 - (void)td_configureAPNS;
 + (NSString *)TD_APNSToken;
+
 @end

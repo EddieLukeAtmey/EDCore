@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-#define COLOR_CUSTOM_RGB(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
-#define COLOR_CUSTOM_RGB_ALPHA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
-
 @interface UIColor (TDCore)
+
+/** Init a color with its RGB hex value (E.g. 0xFF0000 = Red Color). alpha = 1. */
++ (UIColor *)colorWithRGBHex:(NSInteger)hexValue;
+
+/** Init a color with its ARGB hex value (E.g. 0x00FF0000 = Red transparent color (alpha = 0). */
++ (UIColor *)colorWithARGBHex:(NSInteger)hexValue;
 
 @end

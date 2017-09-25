@@ -9,24 +9,15 @@
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
 
-@interface NSArray (TDCore)
-
-@end
-
-#pragma mark - alloc
-@interface NSArray (alloc)
-
-+ (NSArray *)td_withArary:(NSArray *)anArray;
-
-@end
-
 #pragma mark - Validate
 
 @interface NSArray (Validate)
 
 - (BOOL)td_isEmpty;
+
+/** Return YES if not nil and count > 0. */
+- (BOOL)td_hasValue;
 - (BOOL)td_containClass:(Class)aClass;
-- (BOOL)td_containObject:(id)anObject;
 
 @end
 
@@ -34,12 +25,7 @@
 
 @interface NSArray (Accessors)
 
-
 - (id)td_objectAtIndex:(NSUInteger)index;
-- (id)td_firstObject;
-- (id)td_lastObject;
-- (NSInteger)td_indexOfObject:(id)anObject;
 - (id)td_objectOfClass:(Class)aClass;
-
 
 @end

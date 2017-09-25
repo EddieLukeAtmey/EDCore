@@ -8,47 +8,21 @@
 
 #import "NSArray+TDCore.h"
 
-@implementation NSArray (TDCore)
-
-@end
-
-#pragma mark - alloc
-@implementation NSArray (alloc)
-
-+ (NSArray *)td_withArary:(NSArray *)anArray
-{
-    return [[NSArray alloc] initWithArray:anArray];
-}
-
-@end
-
-
 #pragma mark - Validate
 
 @implementation NSArray (Validate)
 
-- (BOOL)td_isEmpty
-{
-    return (self.count == 0);
-}
+- (BOOL)td_isEmpty { return (self.count == 0); }
+- (BOOL)td_hasValue { return self.count > 0; }
 
 - (BOOL)td_containClass:(Class)aClass
 {
     for (id object in self) {
         if ( [object isKindOfClass:aClass]) {
-            return TRUE;
+            return YES;
         }
     }
-    return NO;
-}
 
-- (BOOL)td_containObject:(id)anObject
-{
-    for (id object in self) {
-        if ( [object isEqual:anObject]) {
-            return TRUE;
-        }
-    }
     return NO;
 }
 
@@ -58,41 +32,7 @@
 
 @implementation NSArray (Accessors)
 
-- (id)td_objectAtIndex:(NSUInteger)index
-{
-    if ( ![self td_isEmpty] && self.count > index )
-    {
-        return [self objectAtIndex:index];
-    }
-    
-    return nil;
-}
-
-- (id)td_firstObject
-{
-    if ( ![self td_isEmpty] )
-    {
-        return [self objectAtIndex:0];
-    }
-    
-    return nil;
-}
-
-- (id)td_lastObject
-{
-    if ( ![self td_isEmpty] )
-    {
-        return [self objectAtIndex:self.count - 1];
-    }
-    
-    return nil;
-}
-
-- (NSInteger)td_indexOfObject:(id)anObject
-{
-    return [self indexOfObject:anObject];
-}
-
+- (id)td_objectAtIndex:(NSUInteger)index { return self.count > index ? [self objectAtIndex:index] : nil; }
 
 - (id)td_objectOfClass:(Class)aClass
 {
@@ -103,8 +43,6 @@
     }
     return nil;
 }
-
-
 
 @end
 

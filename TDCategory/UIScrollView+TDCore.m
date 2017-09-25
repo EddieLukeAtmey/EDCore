@@ -20,7 +20,6 @@
 - (void)td_setContentSizeHeight:(CGFloat)height
 {
     self.contentSize = CGSizeMake(self.frame.size.width,height);
-    
 }
 
 - (void)td_setFreeze

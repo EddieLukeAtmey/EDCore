@@ -63,29 +63,9 @@
 - (NSInteger)td_daysBeforeDate:(NSDate *)aDate;
 - (NSInteger)td_distanceInDaysToDate:(NSDate *)anotherDate;
 
-- (NSString*)td_stringFromDate:(NSDate*)aDate;
+#pragma mark - Converter
 - (NSString *)td_stringFromFormat:(NSString *)format;
-- (NSString*)td_stringFromDateToServer;
-- (NSString*)td_stringFromDatePickerToDislay:(NSDate*)aDate;
-- (NSString*)td_stringDateFromServerToDislay:(NSString*)sServerDate;
-- (NSString*)td_stringDateFromDislayToServer:(NSString*)sDislayDate;
-- (NSString*)td_stringDateFromFacebookToDislay:(NSString*)sFaceDate;
-- (NSString *)td_stringDateFromRegisterToDisplayTarget:(NSString *)sDisplayDate;
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// Convert date to: yyyy-MM-dd
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
-+ (NSString *)td_stringDateFromDisplayToServerMyProfile:(NSString *)strDisplay;
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// Convert date to: MM-dd-yyyy hh:mm aaa
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- (NSString *)td_stringDateFromCalendarToServer_Trainee;
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// Convert date to: dd-MMMM-yyyy
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- (NSString *)td_stringDateFromCalendarToDisplayMyProfile;
+- (NSString *)td_stringFromFormat:(NSString *)format timeZone:(NSTimeZone *)timeZone;
 
 + (NSDate *)td_dateFromString:(NSString *)str format:(NSString *)format;
 

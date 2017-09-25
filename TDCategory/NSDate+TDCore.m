@@ -170,7 +170,7 @@
 {
     NSDateComponents *components1 = [CURRENT_CALENDAR components:NSCalendarUnitYear fromDate:self];
     NSDateComponents *components2 = [CURRENT_CALENDAR components:NSCalendarUnitYear fromDate:[NSDate date]];
-    
+
     return (components1.year == (components2.year - 1));
 }
 
@@ -195,7 +195,6 @@
 {
     return ([self td_isEarlierThanDate:[NSDate date]]);
 }
-
 
 #pragma mark Roles
 - (BOOL)td_isTypicallyWeekend
@@ -322,206 +321,33 @@
     return components.hour;
 }
 
-- (NSInteger)td_hour
-{
-    NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
-    return components.hour;
-}
+- (NSInteger)td_hour    { return [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self].hour; }
+- (NSInteger)td_minute  { return [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self].minute; }
+- (NSInteger)td_seconds { return [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self].second; }
+- (NSInteger)td_day     { return [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self].day; }
+- (NSInteger)td_month   { return [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self].month; }
+- (NSInteger)td_week    { return [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self].weekOfMonth; }
+- (NSInteger)td_weekday { return [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self].weekday; }
 
-- (NSInteger)td_minute
-{
-    NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
-    return components.minute;
-}
+// e.g. 2nd Tuesday of the month is 2
+- (NSInteger)td_nthWeekday { return [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self].weekdayOrdinal; }
+- (NSInteger)td_year { return [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self].year; }
 
-- (NSInteger)td_seconds
-{
-    NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
-    return components.second;
-}
-
-- (NSInteger)td_day
-{
-    NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
-    return components.day;
-}
-
-- (NSInteger)td_month
-{
-    NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
-    return components.month;
-}
-
-- (NSInteger)td_week
-{
-    NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
-    return components.weekOfMonth;
-}
-
-- (NSInteger)td_weekday
-{
-    NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
-    return components.weekday;
-}
-
-- (NSInteger)td_nthWeekday // e.g. 2nd Tuesday of the month is 2
-{
-    NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
-    return components.weekdayOrdinal;
-}
-
-- (NSInteger)td_year
-{
-    NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
-    return components.year;
-}
-
-- (NSString*)td_stringFromDate:(NSDate*)aDate
+#pragma mark - Conversion
+- (NSString *)td_stringFromFormat:(NSString *)format { return [self td_stringFromFormat:format timeZone:[NSTimeZone systemTimeZone]]; }
+- (NSString *)td_stringFromFormat:(NSString *)format timeZone:(NSTimeZone *)timeZone
 {
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"MM/dd/yyyy"];
-    [dateFormat setTimeZone:[NSTimeZone systemTimeZone]];
-    NSString *dateString = [dateFormat stringFromDate:aDate];
-    
-    return (dateString);
-}
-
-- (NSString *)td_stringFromFormat:(NSString *)format
-{
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:format];
-    [dateFormat setTimeZone:[NSTimeZone systemTimeZone]];
-    NSString *dateString = [dateFormat stringFromDate:self];
-    
-    return (dateString);
-}
-
-- (NSString*)td_stringFromDateToServer
-{
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"yyyy-MM-dd"];
-    [dateFormat setTimeZone:[NSTimeZone systemTimeZone]];
-    NSString *dateString = [dateFormat stringFromDate:[NSDate date]];
-    
-    return (dateString);
-}
-
-
-- (NSString*)td_stringFromDatePickerToDislay:(NSDate*)aDate
-{
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"dd-MMMM-yyyy"];
-    [dateFormat setTimeZone:[NSTimeZone systemTimeZone]];
-    NSString *dateString = [dateFormat stringFromDate:aDate];
-    
-    return (dateString);
-}
-
-- (NSString*)td_stringDateFromServerToDislay:(NSString*)sServerDate {
-    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateFormat = @"yyyy-MM-dd";
-    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
-    NSDate *serverDate = [dateFormatter dateFromString:sServerDate];
-    
-    [dateFormatter setDateFormat:@"dd-MMMM-yyyy"];
-    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
-    NSString *sDislayDate = [dateFormatter stringFromDate:serverDate];
-    
-    return sDislayDate;
-}
-
-- (NSString*)td_stringDateFromDislayToServer:(NSString*)sDislayDate
-{
-    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateFormat = @"dd-MMMM-yyyy";
-    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
-    NSDate *dislayDate = [dateFormatter dateFromString:sDislayDate];
-    
-    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
-    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
-    NSString *sServerDate = [dateFormatter stringFromDate:dislayDate];
-    
-    return sServerDate;
-}
-
-- (NSString*)td_stringDateFromFacebookToDislay:(NSString*)sFaceDate {
-    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateFormat = @"MM/dd/yyyy";
-    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
-    NSDate *faceDate = [dateFormatter dateFromString:sFaceDate];
-    
-    [dateFormatter setDateFormat:@"dd-MMMM-yyyy"];
-    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
-    NSString *sDislayDate = [dateFormatter stringFromDate:faceDate];
-    
-    return sDislayDate;
-}
-
-- (NSString *)td_stringDateFromRegisterToDisplayTarget:(NSString *)sDisplayDate
-{
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    
-    dateFormatter.dateFormat = @"dd-MM-yyyy";
-    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
-    NSDate *displayDate = [dateFormatter dateFromString:sDisplayDate];
-    
-    [dateFormatter setDateFormat:@"mm-dd-yyyy"];
-    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
-    
-    return [dateFormatter stringFromDate:displayDate];
-}
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// Convert date to: yyyy-MM-dd
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
-+ (NSString *)td_stringDateFromDisplayToServerMyProfile:(NSString *)strDisplay
-{
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    
-    // Format display
-    [dateFormat setDateFormat:@"dd-MMMM-yyyy"];
-    [dateFormat setTimeZone:[NSTimeZone systemTimeZone]];
-    
-    // Convert string to date display
-    NSDate *dateDisplay = [dateFormat dateFromString:strDisplay];
-    
-    // Format send to server
-    [dateFormat setDateFormat:@"yyyy-MM-dd"];
-    [dateFormat setTimeZone:[NSTimeZone systemTimeZone]];
-    
-    return [dateFormat stringFromDate:dateDisplay];
-}
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// Convert date to: MM-dd-yyyy hh:mm aaa
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- (NSString *)td_stringDateFromCalendarToServer_Trainee
-{
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"MM-dd-yyyy hh:mm aaa"];
-    [dateFormat setTimeZone:[NSTimeZone systemTimeZone]];
-    
+    dateFormat.dateFormat = format;
+    dateFormat.timeZone = timeZone;
     return [dateFormat stringFromDate:self];
 }
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// Convert date to: dd-MMMM-yyyy
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- (NSString *)td_stringDateFromCalendarToDisplayMyProfile
-{
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"dd-MMMM-yyyy"];
-    [dateFormat setTimeZone:[NSTimeZone systemTimeZone]];
-    
-    return [dateFormat stringFromDate:self];
-}
-
 
 + (NSDate *)td_dateFromString:(NSString *)str format:(NSString *)format
 {
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:format];
-    [dateFormat setTimeZone:[NSTimeZone systemTimeZone]];
+    dateFormat.dateFormat = format;
+    dateFormat.timeZone = [NSTimeZone systemTimeZone];
     
     return [dateFormat dateFromString:str];
 }

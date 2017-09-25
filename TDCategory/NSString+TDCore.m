@@ -27,12 +27,12 @@
     return [[self td_removeWhitespace] isEqualToString:@""];
 }
 
+- (BOOL)td_hasValue { return !self.td_isEmpty; }
+
 - (BOOL)td_isValidEmail
 {
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}";
-    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
-    
-    return [emailTest evaluateWithObject:self];
+    return [self td_isValidWithRegex:emailRegex];
 }
 
 - (BOOL)td_isValidPassword
@@ -44,23 +44,21 @@
 - (BOOL)td_isValidTelephone
 {
     NSString *phoneRegex = @"[235689][0-9]{6}([0-9]{3})?";
-    NSPredicate *test = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", phoneRegex];
-    return [test evaluateWithObject:self];
+    return [self td_isValidWithRegex:phoneRegex];
 }
 
 - (BOOL)td_validateUrl
 {
     NSString *urlRegEx =
     @"(http|https)://((\\w)*|([0-9]*)|([-|_])*)+([\\.|/]((\\w)*|([0-9]*)|([-|_])*))+";
-    NSPredicate *urlTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", urlRegEx];
-    return [urlTest evaluateWithObject:self];
+    return [self td_isValidWithRegex:urlRegEx];
 }
 
 - (BOOL)td_isValidWithRegex:(NSString *)regex
 {
-    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    NSPredicate *regexPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
     
-    return [emailTest evaluateWithObject:self];
+    return [regexPredicate evaluateWithObject:self];
 }
 
 @end

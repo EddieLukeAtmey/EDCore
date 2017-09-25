@@ -24,18 +24,8 @@
     "CoreFoundation"
   ],
   "source_files": "EDCore/*",
-  "resource_bundles": {
-    "EDCore": [
-      "Resources/**/*.{png,xib,storyboad}"
-    ]
-  },
-  "public_header_files": [
-    "EDCore/*.h",
-    "TDCategory/*.h",
-    "TDEvent/*.h",
-    "TDPopup/*.h",
-    "TDUtils/*.h"
-  ],
+  "resources": "Resources/**/*.{png,xib,storyboad}",
+  "public_header_files": "EDCore/*.h",
   "dependencies": {
     "AutoCoding": [
 
@@ -43,12 +33,12 @@
   },
   "subspecs": [
     {
-      "name": "TDCategory",
-      "source_files": "TDCategory/*"
+      "name": "IBHelper",
+      "source_files": "IBHelper/*"
     },
     {
-      "name": "TDEngineLog",
-      "source_files": "TDEngineLog/*"
+      "name": "TDCategory",
+      "source_files": "TDCategory/*"
     },
     {
       "name": "TDEvent",

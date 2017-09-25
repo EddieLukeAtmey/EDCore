@@ -15,7 +15,6 @@
 - (NSUInteger)td_fitString:(NSString *)string;
 - (NSString *)td_StringFitString:(NSString *)string;
 
-
 //NSFontAttributeName
 - (void)td_setMultiText:(NSArray *)texts withMultiStyle:(NSArray *)styles StyleName:(NSString *)styleName;
 - (void)td_setMultiText:(NSArray *)texts withMultiStyle:(NSArray *)styles;

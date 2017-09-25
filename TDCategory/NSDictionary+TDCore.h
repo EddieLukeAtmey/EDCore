@@ -8,23 +8,27 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSDictionary (TDCore)
-
-@end
+NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Accessors
 @interface NSDictionary (Accessors)
 
-- (id)td_objectForKey:(NSString *)key;
-- (BOOL)td_containsObjectForKey:(id )key;
+- (nullable id)td_objectForKey:(NSString *)key;
+
 - (NSDictionary *)td_dictionaryForKey:(NSString *)key;
 - (NSMutableDictionary *)td_mutableDictionaryForKey:(NSString *)key;
 - (NSArray *)td_arrayForKey:(NSString *)key;
 - (NSMutableArray *)td_mutableArrayForKey:(NSString *)key;
 - (NSString *)td_stringForKey:(NSString *)key;
 - (NSInteger)td_intForKey:(NSString *)key;
+
+/** Return [NSDecimalNumber zero] if object invalid (null, nil, nan...). */
+- (NSDecimalNumber *)td_decimalNumberForKey:(NSString *)key;
+
 - (float)td_floatForKey:(NSString *)key;
 - (double)td_doubleForKey:(NSString *)key;
 - (BOOL)td_boolForKey:(NSString *)key;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -22,6 +22,11 @@
 @interface NSString (Validate)
 
 - (BOOL)td_isEmpty;
+
+/** Return if string is not null or empty. */
+- (BOOL)td_hasValue;
+
+/** Validate email. */
 - (BOOL)td_isValidEmail;
 - (BOOL)td_isValidPassword;
 - (BOOL)td_isValidTelephone;
@@ -32,7 +37,6 @@
 
 #pragma mark - URL
 @interface NSString (URL)
-
 
 - (NSString *)td_stringByUrlEncoded;
 

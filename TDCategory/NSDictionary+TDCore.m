@@ -18,23 +18,13 @@
 - (id)td_objectForKey:(NSString *)key
 {
     id object = [self objectForKey:key];
-    
+
     if ( !object || object == NULL || object == [NSNull null] )
     {
         return nil;
     }
     
     return object;
-}
-
-- (BOOL)td_containsObjectForKey:(id )key
-{
-    if (!self )
-    {
-        return NO;
-    }
-    
-    return [self.allKeys containsObject:key];
 }
 
 - (NSDictionary *)td_dictionaryForKey:(NSString *)key
@@ -113,9 +103,18 @@
         return 0;
     }
     
-    return [object intValue];
+    return [object integerValue];
 }
 
+- (NSDecimalNumber *)td_decimalNumberForKey:(NSString *)key
+{
+    NSString *stringNumber = [self td_stringForKey:key];
+
+    NSDecimalNumber *decimalNumber = [NSDecimalNumber decimalNumberWithString:stringNumber];
+
+    if ([decimalNumber isEqualToNumber:[NSDecimalNumber notANumber]]) return [NSDecimalNumber zero];
+    return decimalNumber;
+}
 
 - (float)td_floatForKey:(NSString *)key
 {

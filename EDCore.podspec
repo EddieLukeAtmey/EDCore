@@ -23,7 +23,11 @@ Pod::Spec.new do |s|
     s.requires_arc = true
     s.frameworks   = ['Foundation', 'UIKit', 'CoreGraphics', 'QuartzCore', 'CoreFoundation']
 
-    s.source_files = 'EDCore/*', 'TDCategory/*','TDEvent/*','TDPopup/*','TDUtils/*'
+    s.source_files = 'EDCore/*'
+
+    s.subspec 'IBHelper' do |ss|
+    ss.source_files = 'IBHelper/*'
+    end
 
     s.subspec 'TDCategory' do |ss|
     ss.source_files = 'TDCategory/*'
@@ -48,12 +52,8 @@ Pod::Spec.new do |s|
     end
 
     s.resources = 'Resources/**/*.{png,xib,storyboad}'
-#    s.resource_bundles = {
-#      'EDCore' => ['Resources/**/*.{png,xib,storyboad}']
-#    }
 
-
-    s.public_header_files = 'EDCore/*.h','TDCategory/*.h','TDEvent/*.h','TDPopup/*.h','TDUtils/*.h'
+    s.public_header_files = 'EDCore/*.h' #,'TDCategory/*.h','TDEvent/*.h','TDPopup/*.h','TDUtils/*.h','IBHelper/*.h'
     # s.frameworks = 'UIKit', 'MapKit'
     s.dependency 'AutoCoding'
 
