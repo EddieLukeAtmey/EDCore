@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
     s.requires_arc = true
     s.frameworks   = ['Foundation', 'UIKit', 'CoreGraphics', 'QuartzCore', 'CoreFoundation']
 
-    s.source_files = 'EDCore/*'
+    s.source_files = 'EDCore/*', '**/*.swift', '*.swift'
 
     s.subspec 'IBHelper' do |ss|
     ss.source_files = 'IBHelper/*'
