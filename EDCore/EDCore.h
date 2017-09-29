@@ -25,6 +25,7 @@
 #import "UIRefreshControl+UITableView.h"
 #import "UIStoryboard+TDCore.h"
 #import "UILabel+TDCore.h"
+#import "NSDecimalNumber+EDCore.h"
 
 #pragma mark - TDEvent
 #import "UIAlertView+Block.h"

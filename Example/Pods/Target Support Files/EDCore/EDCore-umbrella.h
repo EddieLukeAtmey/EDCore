@@ -17,6 +17,7 @@
 #import "UIView+Extention.h"
 #import "NSArray+TDCore.h"
 #import "NSDate+TDCore.h"
+#import "NSDecimalNumber+EDCore.h"
 #import "NSDictionary+TDCore.h"
 #import "NSObject+TDCore.h"
 #import "NSObject+TDDocument.h"
