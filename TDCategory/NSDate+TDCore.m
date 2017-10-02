@@ -266,40 +266,40 @@
 
 #pragma mark Retrieving Intervals
 
-- (NSInteger)td_minutesAfterDate:(NSDate *)aDate
+- (NSTimeInterval)td_minutesAfterDate:(NSDate *)aDate
 {
     NSTimeInterval ti = [self timeIntervalSinceDate:aDate];
-    return (NSInteger)(ti / D_MINUTE);
+    return (ti / D_MINUTE);
 }
 
-- (NSInteger)td_minutesBeforeDate:(NSDate *)aDate
+- (NSTimeInterval)td_minutesBeforeDate:(NSDate *)aDate
 {
     NSTimeInterval ti = [aDate timeIntervalSinceDate:self];
-    return (NSInteger)(ti / D_MINUTE);
+    return (ti / D_MINUTE);
 }
 
-- (NSInteger)td_hoursAfterDate:(NSDate *)aDate
+- (NSTimeInterval)td_hoursAfterDate:(NSDate *)aDate
 {
     NSTimeInterval ti = [self timeIntervalSinceDate:aDate];
-    return (NSInteger)(ti / D_HOUR);
+    return (ti / D_HOUR);
 }
 
-- (NSInteger)td_hoursBeforeDate:(NSDate *)aDate
+- (NSTimeInterval)td_hoursBeforeDate:(NSDate *)aDate
 {
     NSTimeInterval ti = [aDate timeIntervalSinceDate:self];
-    return (NSInteger)(ti / D_HOUR);
+    return (ti / D_HOUR);
 }
 
-- (NSInteger)td_daysAfterDate:(NSDate *)aDate
+- (NSTimeInterval)td_daysAfterDate:(NSDate *)aDate
 {
     NSTimeInterval ti = [self timeIntervalSinceDate:aDate];
-    return (NSInteger)(ti / D_DAY);
+    return (ti / D_DAY);
 }
 
-- (NSInteger)td_daysBeforeDate:(NSDate *)aDate
+- (NSTimeInterval)td_daysBeforeDate:(NSDate *)aDate
 {
     NSTimeInterval ti = [aDate timeIntervalSinceDate:self];
-    return (NSInteger)(ti / D_DAY);
+    return (ti / D_DAY);
 }
 
 // Thanks, dmitrydims

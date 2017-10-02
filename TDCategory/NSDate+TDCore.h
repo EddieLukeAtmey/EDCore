@@ -55,12 +55,12 @@
 - (NSDate *)td_dateAtStartOfDay;
 
 // Retrieving intervals
-- (NSInteger)td_minutesAfterDate:(NSDate *)aDate;
-- (NSInteger)td_minutesBeforeDate:(NSDate *)aDate;
-- (NSInteger)td_hoursAfterDate:(NSDate *)aDate;
-- (NSInteger)td_hoursBeforeDate:(NSDate *)aDate;
-- (NSInteger)td_daysAfterDate:(NSDate *)aDate;
-- (NSInteger)td_daysBeforeDate:(NSDate *)aDate;
+- (NSTimeInterval)td_minutesAfterDate:(NSDate *)aDate;
+- (NSTimeInterval)td_minutesBeforeDate:(NSDate *)aDate;
+- (NSTimeInterval)td_hoursAfterDate:(NSDate *)aDate;
+- (NSTimeInterval)td_hoursBeforeDate:(NSDate *)aDate;
+- (NSTimeInterval)td_daysAfterDate:(NSDate *)aDate;
+- (NSTimeInterval)td_daysBeforeDate:(NSDate *)aDate;
 - (NSInteger)td_distanceInDaysToDate:(NSDate *)anotherDate;
 
 #pragma mark - Converter
