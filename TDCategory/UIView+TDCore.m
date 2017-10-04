@@ -221,8 +221,8 @@ static const void *blockEventOfTDCoreVoid = &blockEventOfTDCoreVoid;
 - (CGFloat)x { return self.td_fX; }
 - (CGFloat)y { return self.td_fY; }
 - (CGPoint)origin { return self.td_fOrigin; }
-- (CGFloat)width { return self.td.fWidth; }
-- (CGFloat)height { return self.td.fHeight; }
+- (CGFloat)width { return self.td_fWidth; }
+- (CGFloat)height { return self.td_fHeight; }
 - (CGSize)size { return self.td_fSize; }
 
 #pragma mark Set
