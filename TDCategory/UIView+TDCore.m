@@ -26,55 +26,16 @@ static const void *blockEventOfTDCoreVoid = &blockEventOfTDCoreVoid;
 }
 
 #pragma mark - Get UI
-- (id)td_safeWithTag:(NSInteger )tag
-{
-    return [self viewWithTag:tag];
-}
-
-- (UILabel *)td_lbWithTag:(NSInteger )tag
-{
-    return [self td_safeWithTag:tag];
-}
-
-- (UITextField *)td_tfWithTag:(NSInteger )tag
-{
-    return [self td_safeWithTag:tag];
-}
-
-- (UIImageView *)td_imvWithTag:(NSInteger)tag
-{
-    return [self td_safeWithTag:tag];
-}
-
-- (UIButton *)td_buttonWithTag:(NSInteger)tag
-{
-    return [self td_safeWithTag:tag];
-}
-
-- (UISwitch *)td_switchWithTag:(NSInteger)tag
-{
-    return [self td_safeWithTag:tag];
-}
-
-- (UITextView *)td_tvWithTag:(NSInteger)tag
-{
-    return [self td_safeWithTag:tag];
-}
-
-- (UITableView *)td_tableViewWithTag:(NSInteger)tag
-{
-    return [self td_safeWithTag:tag];
-}
-
-- (UIScrollView *)td_scrollViewWithTag:(NSInteger)tag
-{
-    return [self td_safeWithTag:tag];
-}
-
-- (UIWebView *)td_webViewWithTag:(NSInteger)tag
-{
-    return [self td_safeWithTag:tag];
-}
+- (id)td_safeWithTag:(NSInteger)tag                   { return [self viewWithTag:tag]; }
+- (UILabel *)td_lbWithTag:(NSInteger)tag              { return [self td_safeWithTag:tag]; }
+- (UITextField *)td_tfWithTag:(NSInteger)tag          { return [self td_safeWithTag:tag]; }
+- (UIImageView *)td_imvWithTag:(NSInteger)tag         { return [self td_safeWithTag:tag]; }
+- (UIButton *)td_buttonWithTag:(NSInteger)tag         { return [self td_safeWithTag:tag]; }
+- (UISwitch *)td_switchWithTag:(NSInteger)tag         { return [self td_safeWithTag:tag]; }
+- (UITextView *)td_tvWithTag:(NSInteger)tag           { return [self td_safeWithTag:tag]; }
+- (UITableView *)td_tableViewWithTag:(NSInteger)tag   { return [self td_safeWithTag:tag]; }
+- (UIScrollView *)td_scrollViewWithTag:(NSInteger)tag { return [self td_safeWithTag:tag]; }
+- (UIWebView *)td_webViewWithTag:(NSInteger)tag       { return [self td_safeWithTag:tag]; }
 
 #pragma mark - Add Line
 // Origin
@@ -241,84 +202,46 @@ static const void *blockEventOfTDCoreVoid = &blockEventOfTDCoreVoid;
 }
 
 #pragma mark - Frame
-#pragma mark + Set
-- (void)setFrameWithX:(CGFloat )x
-{
-    [self setFrameWithX:x withY:[self y] withWidth:[self width] withHeight:[self height]];
-}
-
-- (void)setFrameWithY:(CGFloat )y
-{
-    [self setFrameWithX:[self x] withY:y withWidth:[self width] withHeight:[self height]];
-}
-
-- (void)setFrameWithX:(CGFloat )x withY:(CGFloat )y
-{
-    [self setFrameWithX:x withY:y withWidth:[self width] withHeight:[self height]];
-}
-
-- (void)setFrameWithWidth:(CGFloat )width
-{
-    [self setFrameWithX:[self x] withY:[self y] withWidth:width withHeight:[self height]];
-}
-
-- (void)setFrameWithHeight:(CGFloat )height
-{
-    [self setFrameWithX:[self x] withY:[self y] withWidth:[self width] withHeight:height];
-}
-
-- (void)setFrameWithWidth:(CGFloat )width withHeight:(CGFloat )height
-{
-    [self setFrameWithX:[self x] withY:[self y] withWidth:width withHeight:height];
-}
-
-- (void)setFrameWithX:(CGFloat )x withWidth:(CGFloat )width
-{
+#pragma mark depricated
+- (void)setFrameWithX:(CGFloat )x { self.td_fX = x; }
+- (void)setFrameWithY:(CGFloat )y { self.td_fY = y; }
+- (void)setFrameWithX:(CGFloat )x withY:(CGFloat )y { self.td_fOrigin = CGPointMake(x, y); }
+- (void)setFrameWithWidth:(CGFloat )width { self.td_fWidth = width; }
+- (void)setFrameWithHeight:(CGFloat )height { self.td_fHeight = height; }
+- (void)setFrameWithWidth:(CGFloat )width withHeight:(CGFloat )height { self.td_fSize = CGSizeMake(width, height); }
+- (void)setFrameWithX:(CGFloat )x withWidth:(CGFloat )width{
     [self setFrameWithX:x withY:[self y] withWidth:width withHeight:[self height]];
 }
-
-- (void)setFrameWithY:(CGFloat )y withHeight:(CGFloat )height
-{
+- (void)setFrameWithY:(CGFloat )y withHeight:(CGFloat )height{
     [self setFrameWithX:[self x] withY:y withWidth:[self width] withHeight:height];
 }
-
-- (void)setFrameWithX:(CGFloat )x withY:(CGFloat )y withWidth:(CGFloat )width withHeight:(CGFloat )height
-{
+- (void)setFrameWithX:(CGFloat )x withY:(CGFloat )y withWidth:(CGFloat )width withHeight:(CGFloat )height{
     [self setFrame:CGRectMake(x, y, width, height)];
 }
+- (CGFloat)x { return self.td_fX; }
+- (CGFloat)y { return self.td_fY; }
+- (CGPoint)origin { return self.td_fOrigin; }
+- (CGFloat)width { return self.td.fWidth; }
+- (CGFloat)height { return self.td.fHeight; }
+- (CGSize)size { return self.td_fSize; }
 
-#pragma mark + Get
-- (CGFloat)x
-{
-    return self.frame.origin.x;
-}
+#pragma mark Set
+- (void)setTd_fOrigin:(CGPoint)td_fOrigin { self.frame = (CGRect){.origin = td_fOrigin, .size = self.td_fSize}; }
+- (void)setTd_fX:(CGFloat)td_fX           { self.frame = CGRectMake(td_fX, self.td_fY, self.td_fWidth, self.td_fHeight); }
+- (void)setTd_fY:(CGFloat)td_fY           { self.frame = CGRectMake(self.td_fX, td_fY, self.td_fWidth, self.td_fHeight); }
 
-- (CGFloat)y
-{
-    return self.frame.origin.y;
-}
+- (void)setTd_fSize:(CGSize)td_fSize      { self.frame = (CGRect){.origin = self.td_fOrigin, .size = td_fSize}; }
+- (void)setTd_fWidth:(CGFloat)td_fWidth   { self.frame = CGRectMake(self.td_fX, self.td_fY, self.td_fWidth, self.td_fHeight); }
+- (void)setTd_fHeight:(CGFloat)td_fHeight { self.frame = CGRectMake(self.td_fX, self.td_fY, self.td_fWidth, self.td_fHeight); }
 
-- (CGPoint)origin
-{
-    return self.frame.origin;
-}
+#pragma mark Get
+- (CGPoint)td_fOrigin { return self.frame.origin; }
+- (CGFloat)td_fX      { return self.td_fOrigin.x; }
+- (CGFloat)td_fY      { return self.td_fOrigin.y; }
 
-- (CGFloat)width
-{
-    return self.frame.size.width;
-}
-
-- (CGFloat)height
-{
-    return self.frame.size.height;
-}
-
-- (CGSize)size
-{
-    return self.frame.size;
-}
-
-#pragma mark - Position
+- (CGSize )td_fSize   { return self.frame.size; }
+- (CGFloat)td_fWidth  { return self.td_fSize.width; }
+- (CGFloat)td_fHeight { return self.td_fSize.height; }
 
 #pragma mark - Handle tap
 - (void)td_addHandleSingleTapWithTarget:(id )target withAction:(SEL )action
@@ -331,7 +254,7 @@ static const void *blockEventOfTDCoreVoid = &blockEventOfTDCoreVoid;
     [self td_addHandleTapWithTarget:target withAction:action withNumberOfTap:2];
 }
 
-- (void)td_addHandleTapWithTarget:(id )target withAction:(SEL )action withNumberOfTap:(NSInteger )numberOfTap
+- (void)td_addHandleTapWithTarget:(id)target withAction:(SEL )action withNumberOfTap:(NSInteger )numberOfTap
 {
     [self setUserInteractionEnabled:YES];
     

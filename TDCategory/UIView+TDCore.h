@@ -65,28 +65,35 @@ typedef void (^UIViewTDCoreBlock) ();
 - (void)td_setBackgroundColorWithImage:(UIImage *)image;
 - (void)td_setBackgroundColorWithImageName:(NSString *)imageName;
 
-#pragma mark - Frame
-#pragma mark + Set
-- (void)setFrameWithX:(CGFloat )x;
-- (void)setFrameWithY:(CGFloat )y;
-- (void)setFrameWithX:(CGFloat )x withY:(CGFloat )y;
+#pragma mark - Convenience Frame
+- (void)setFrameWithX:(CGFloat )x ED_DEPRECATED;
+- (void)setFrameWithY:(CGFloat )y ED_DEPRECATED;
+- (void)setFrameWithX:(CGFloat )x withY:(CGFloat )y ED_DEPRECATED;
+- (void)setFrameWithWidth:(CGFloat )width ED_DEPRECATED;
+- (void)setFrameWithHeight:(CGFloat )height ED_DEPRECATED;
+- (void)setFrameWithWidth:(CGFloat )width withHeight:(CGFloat )height ED_DEPRECATED;
+- (void)setFrameWithX:(CGFloat )x withWidth:(CGFloat )width ED_DEPRECATED;
+- (void)setFrameWithY:(CGFloat )y withHeight:(CGFloat )height ED_DEPRECATED;
+- (void)setFrameWithX:(CGFloat )x withY:(CGFloat )y withWidth:(CGFloat )width withHeight:(CGFloat )height ED_DEPRECATED;
+- (CGFloat)x ED_DEPRECATED;
+- (CGFloat)y ED_DEPRECATED;
+- (CGPoint)origin ED_DEPRECATED;
+- (CGFloat)width ED_DEPRECATED;
+- (CGFloat)height ED_DEPRECATED;
+- (CGSize)size ED_DEPRECATED;
 
-- (void)setFrameWithWidth:(CGFloat )width;
-- (void)setFrameWithHeight:(CGFloat )height;
-- (void)setFrameWithWidth:(CGFloat )width withHeight:(CGFloat )height;
-
-- (void)setFrameWithX:(CGFloat )x withWidth:(CGFloat )width;
-- (void)setFrameWithY:(CGFloat )y withHeight:(CGFloat )height;
-
-- (void)setFrameWithX:(CGFloat )x withY:(CGFloat )y withWidth:(CGFloat )width withHeight:(CGFloat )height;
-
-#pragma mark + Get
-- (CGFloat)x;
-- (CGFloat)y;
-- (CGPoint)origin;
-- (CGFloat)width;
-- (CGFloat)height;
-- (CGSize)size;
+/** View.frame.origin.x */
+@property (nonatomic) CGFloat td_fX;
+/** View.frame.origin.y */
+@property (nonatomic) CGFloat td_fY;
+/** View.frame.origin */
+@property (nonatomic) CGPoint td_fOrigin;
+/** View.frame.size.width */
+@property (nonatomic) CGFloat td_fWidth;
+/** View.frame.size.height */
+@property (nonatomic) CGFloat td_fHeight;
+/** View.frame.size */
+@property (nonatomic) CGSize td_fSize;
 
 #pragma mark - Handle tap
 - (void)td_addHandleSingleTapWithTarget:(id )target withAction:(SEL )action;

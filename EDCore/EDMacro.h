@@ -51,3 +51,4 @@ _Pragma("clang diagnostic pop")
 #define TD_TICK NSDate *td_startDate = [NSDate date]
 #define TD_TOCK NSLog(@"Elapsed Time: %f",[td_startDate timeIntervalSinceNow])
 
+#define ED_DEPRECATED __attribute__((deprecated("This method has been deprecated and will be removed in the future.")))
