@@ -19,34 +19,25 @@
 {
     id object = [self objectForKey:key];
 
-    if ( !object || object == NULL || object == [NSNull null] )
-    {
+    if ( !object || object == NULL || object == [NSNull null] ) {
         return nil;
     }
-    
+
     return object;
 }
 
 - (NSDictionary *)td_dictionaryForKey:(NSString *)key
 {
     id object = [self td_objectForKey:key];
-    
-    if ( object && [object isKindOfClass:[NSDictionary class]] )
-    {
-        return object;
-    }
-    
-    return [NSDictionary new];
+    return [object isKindOfClass:[NSDictionary class]] ? object : @{};
 }
-
 
 - (NSMutableDictionary *)td_mutableDictionaryForKey:(NSString *)key
 {
     id object = [self td_objectForKey:key];
     
-    if ( object && [object isKindOfClass:[NSDictionary class]] )
-    {
-        return [[NSMutableDictionary alloc] initWithDictionary:object];
+    if ([object isKindOfClass:[NSDictionary class]] ) {
+        return [NSMutableDictionary dictionaryWithDictionary:object];
     }
     
     return [NSMutableDictionary new];
@@ -55,24 +46,17 @@
 - (NSArray *)td_arrayForKey:(NSString *)key
 {
     id object = [self td_objectForKey:key];
-    
-    if ( object && [object isKindOfClass:[NSArray class]] )
-    {
-        return object;
-    }
-    
-    return [NSArray new];
+    return [object isKindOfClass:[NSArray class]] ? object : @[];
 }
 
 - (NSMutableArray *)td_mutableArrayForKey:(NSString *)key
 {
     id object = [self td_objectForKey:key];
     
-    if ( object && [object isKindOfClass:[NSArray class]] )
-    {
-        return [[NSMutableArray alloc] initWithArray:object];
+    if ( [object isKindOfClass:[NSArray class]] ) {
+        return [NSMutableArray arrayWithArray:object];
     }
-    
+
     return [NSMutableArray new];
 }
 
@@ -80,30 +64,17 @@
 - (NSString *)td_stringForKey:(NSString *)key
 {
     id object = [self td_objectForKey:key];
-    
-    if ( [object isKindOfClass:[NSString class]] )
-    {
-        return object;
-    }
-    else if ( object )
-    {
-        return [NSString stringWithFormat:@"%@", object];
-    }
-    
+
+    if ( [object isKindOfClass:[NSString class]] ) return object;
+    else if ( object ) return [NSString stringWithFormat:@"%@", object];
+
     return @"";
 }
-
 
 - (NSInteger)td_intForKey:(NSString *)key
 {
     id object = [self td_objectForKey:key];
-    
-    if ( !object )
-    {
-        return 0;
-    }
-    
-    return [object integerValue];
+    return [object respondsToSelector:@selector(integerValue)] ? [object integerValue] : 0;
 }
 
 - (NSDecimalNumber *)td_decimalNumberForKey:(NSString *)key
@@ -119,37 +90,19 @@
 - (float)td_floatForKey:(NSString *)key
 {
     id object = [self td_objectForKey:key];
-    
-    if ( !object )
-    {
-        return 0.0f;
-    }
-    
-    return [object floatValue];
+    return [object respondsToSelector:@selector(floatValue)] ? [object floatValue] : 0.0f;
 }
 
 - (double)td_doubleForKey:(NSString *)key
 {
     id object = [self td_objectForKey:key];
-    
-    if ( !object )
-    {
-        return 0.0f;
-    }
-    
-    return [object doubleValue];
+    return [object respondsToSelector:@selector(doubleValue)] ? [object doubleValue] : 0.0f;
 }
 
 - (BOOL)td_boolForKey:(NSString *)key
 {
     id object = [self td_objectForKey:key];
-    
-    if ( !object )
-    {
-        return NO;
-    }
-    
-    return [object boolValue];
+    return [object respondsToSelector:@selector(boolValue)] ? [object boolValue] : object != nil;
 }
 
 @end
