@@ -6,6 +6,7 @@
 //
 // Version 1.2.11
 
+#import "EDMacro.h"
 #import "TDBaseViewController.h"
 
 #pragma mark - IBHelper
@@ -45,13 +46,8 @@
 #pragma mark - TDCustomView
 #import "TDDatePicker.h"
 
-//#pragma mark - TableViewDragLoad
-//#import "UITableView+DragLoad.h"
-
 #pragma mark - APN
 //#import "UIResponder+TDPush.h"
 
 #pragma mark - THEME
 #import "TDThemeManagement.h"
-
-#import "EDMacro.h"
