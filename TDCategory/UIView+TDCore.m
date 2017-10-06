@@ -231,8 +231,8 @@ static const void *blockEventOfTDCoreVoid = &blockEventOfTDCoreVoid;
 - (void)setTd_fY:(CGFloat)td_fY           { self.frame = CGRectMake(self.td_fX, td_fY, self.td_fWidth, self.td_fHeight); }
 
 - (void)setTd_fSize:(CGSize)td_fSize      { self.frame = (CGRect){.origin = self.td_fOrigin, .size = td_fSize}; }
-- (void)setTd_fWidth:(CGFloat)td_fWidth   { self.frame = CGRectMake(self.td_fX, self.td_fY, self.td_fWidth, self.td_fHeight); }
-- (void)setTd_fHeight:(CGFloat)td_fHeight { self.frame = CGRectMake(self.td_fX, self.td_fY, self.td_fWidth, self.td_fHeight); }
+- (void)setTd_fWidth:(CGFloat)td_fWidth   { self.frame = CGRectMake(self.td_fX, self.td_fY, td_fWidth, self.td_fHeight); }
+- (void)setTd_fHeight:(CGFloat)td_fHeight { self.frame = CGRectMake(self.td_fX, self.td_fY, self.td_fWidth, td_fHeight); }
 
 #pragma mark Get
 - (CGPoint)td_fOrigin { return self.frame.origin; }
