@@ -26,6 +26,7 @@
 #import "UIStoryboard+TDCore.h"
 #import "UILabel+TDCore.h"
 #import "NSDecimalNumber+EDCore.h"
+#import "UIViewController+TDAlert.h"
 
 #pragma mark - TDEvent
 #import "UIAlertView+Block.h"

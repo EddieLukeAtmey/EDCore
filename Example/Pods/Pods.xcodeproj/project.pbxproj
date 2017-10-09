@@ -63,6 +63,8 @@
 		AB9A21080A35947B959237AC7BD8F013 /* TDPlist.h in Headers */ = {isa = PBXBuildFile; fileRef = E2C96EC459C0ECCD9A689AFB35EA62DE /* TDPlist.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACEC6F6D956F0FA2175BBB38205B2EF6 /* NSString+TDCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D097A7844B2B023A4440CB32A7E6CF0 /* NSString+TDCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B13818EFFD3E7AA733AC463BC8B9D3EA /* TDBaseObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 49868668B6FB0E31D2BA433D2D292942 /* TDBaseObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B20031861F8B648F00A85C19 /* UIViewController+TDAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = B20031841F8B648E00A85C19 /* UIViewController+TDAlert.m */; };
+		B20031881F8B6B6E00A85C19 /* UIViewController+TDAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = B20031851F8B648E00A85C19 /* UIViewController+TDAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B22BAEB51F7E2E1500621C1B /* NSDecimalNumber+EDCore.h in Headers */ = {isa = PBXBuildFile; fileRef = B22BAEB31F7E2E1500621C1B /* NSDecimalNumber+EDCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B22BAEB61F7E2E1500621C1B /* NSDecimalNumber+EDCore.m in Sources */ = {isa = PBXBuildFile; fileRef = B22BAEB41F7E2E1500621C1B /* NSDecimalNumber+EDCore.m */; };
 		B2F22C44D31A95F715315B5B450321AA /* TDPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = F77590880B531C6402AFDD5BA38DA575 /* TDPlist.m */; };
@@ -191,6 +193,8 @@
 		A63DE78E2D7830F20B57056703E2D49E /* UIButton+TDEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+TDEvent.h"; path = "TDEvent/UIButton+TDEvent.h"; sourceTree = "<group>"; };
 		A8EAAD8BEFF785A4630544C9625897FB /* NSArray+TDCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+TDCore.h"; path = "TDCategory/NSArray+TDCore.h"; sourceTree = "<group>"; };
 		AA30894A0585DC0DBBF21D2B009BFD81 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B20031841F8B648E00A85C19 /* UIViewController+TDAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+TDAlert.m"; path = "TDCategory/UIViewController+TDAlert.m"; sourceTree = "<group>"; };
+		B20031851F8B648E00A85C19 /* UIViewController+TDAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIViewController+TDAlert.h"; path = "TDCategory/UIViewController+TDAlert.h"; sourceTree = "<group>"; };
 		B22BAEB31F7E2E1500621C1B /* NSDecimalNumber+EDCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSDecimalNumber+EDCore.h"; path = "TDCategory/NSDecimalNumber+EDCore.h"; sourceTree = "<group>"; };
 		B22BAEB41F7E2E1500621C1B /* NSDecimalNumber+EDCore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSDecimalNumber+EDCore.m"; path = "TDCategory/NSDecimalNumber+EDCore.m"; sourceTree = "<group>"; };
 		B2EEB4E5849C7BA00820BF8D051DBA2A /* SMIconLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMIconLabel.swift; path = TDCustomView/SMIconLabel.swift; sourceTree = "<group>"; };
@@ -318,6 +322,8 @@
 				D920A7E7B4EEBD8EF006E2956D3E1D5C /* NSArray+TDCore.m */,
 				6AA8D042D35B7ADF15B99C41DBC6C3A6 /* NSDate+TDCore.h */,
 				E771CB05E2957A0B621B548DB9FE6AF8 /* NSDate+TDCore.m */,
+				B22BAEB31F7E2E1500621C1B /* NSDecimalNumber+EDCore.h */,
+				B22BAEB41F7E2E1500621C1B /* NSDecimalNumber+EDCore.m */,
 				9221EC6D49E7916721B6383F6311FC19 /* NSDictionary+TDCore.h */,
 				ED9E0295B02A777BE8F535E7A277BECA /* NSDictionary+TDCore.m */,
 				6FDC38D1246229C131711B2F5E221686 /* NSObject+TDCore.h */,
@@ -344,8 +350,8 @@
 				7391F0CD43A3699DA81FE2ADAD7F1AB8 /* UIView+TDCore.m */,
 				315C670F51279C31B3191063A6A73381 /* UIView+TDRecognizer.h */,
 				C0BC45419B2E1E55794555ACF385FDF1 /* UIView+TDRecognizer.m */,
-				B22BAEB31F7E2E1500621C1B /* NSDecimalNumber+EDCore.h */,
-				B22BAEB41F7E2E1500621C1B /* NSDecimalNumber+EDCore.m */,
+				B20031851F8B648E00A85C19 /* UIViewController+TDAlert.h */,
+				B20031841F8B648E00A85C19 /* UIViewController+TDAlert.m */,
 			);
 			name = TDCategory;
 			sourceTree = "<group>";
@@ -604,6 +610,7 @@
 				87D2D150ED71D341069315F7B641DBAF /* UIView+TDRecognizer.h in Headers */,
 				B22BAEB51F7E2E1500621C1B /* NSDecimalNumber+EDCore.h in Headers */,
 				29802B4E4CD655B8D475FBCBBCCB52C3 /* UIViewController+Popup.h in Headers */,
+				B20031881F8B6B6E00A85C19 /* UIViewController+TDAlert.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,6 +731,7 @@
 				BBDEB69CFC2A13BEFCB14C34724D2720 /* EDCore-dummy.m in Sources */,
 				6EE410156F99384917323B681C2B653D /* EDReadMoreLabel.swift in Sources */,
 				5F760705B45EBD54377D04C3D73B51D3 /* NSArray+TDCore.m in Sources */,
+				B20031861F8B648F00A85C19 /* UIViewController+TDAlert.m in Sources */,
 				6BCDF6690BB8B08F6A9FED5BA1AB3650 /* NSDate+TDCore.m in Sources */,
 				ECD7354FF1BB832AA42E258E45EAFC13 /* NSDictionary+TDCore.m in Sources */,
 				F3EC4AA42A3D00FDADF3620448F2A639 /* NSObject+TDAutoCoding.m in Sources */,
@@ -946,6 +954,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/EDCore/EDCore-prefix.pch";
@@ -981,6 +990,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/EDCore/EDCore-prefix.pch";
