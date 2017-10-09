@@ -64,10 +64,23 @@
 - (NSInteger)td_distanceInDaysToDate:(NSDate *)anotherDate;
 
 #pragma mark - Converter
+/** Convert date to string with format, time zone = system timezone. */
 - (NSString *)td_stringFromFormat:(NSString *)format;
+
+/** Convert date to string with format, time zone = GMT+0 */
+- (NSString *)td_utcStringFromFormat:(NSString *)format;
+
+/** Convert date to string with format, custom time zone */
 - (NSString *)td_stringFromFormat:(NSString *)format timeZone:(NSTimeZone *)timeZone;
 
+/** Convert string to date with format, system time zone */
 + (NSDate *)td_dateFromString:(NSString *)str format:(NSString *)format;
+
+/** Convert string to date with format, time zone = GMT+0 */
++ (NSDate *)td_utcDateFromString:(NSString *)str format:(NSString *)format;
+
+/** Convert string to date with format, custom time zone */
++ (NSDate *)td_dateFromString:(NSString *)str format:(NSString *)format timeZone:(NSTimeZone *)timeZone;
 
 // Decomposing dates
 @property (readonly) NSInteger td_nearestHour;

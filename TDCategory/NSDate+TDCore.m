@@ -335,6 +335,9 @@
 
 #pragma mark - Conversion
 - (NSString *)td_stringFromFormat:(NSString *)format { return [self td_stringFromFormat:format timeZone:[NSTimeZone systemTimeZone]]; }
+
+- (NSString *)td_utcStringFromFormat:(NSString *)format { return [self td_stringFromFormat:format timeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]]; }
+
 - (NSString *)td_stringFromFormat:(NSString *)format timeZone:(NSTimeZone *)timeZone
 {
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
@@ -345,10 +348,20 @@
 
 + (NSDate *)td_dateFromString:(NSString *)str format:(NSString *)format
 {
+    return [self td_dateFromString:str format:format timeZone:[NSTimeZone systemTimeZone]];
+}
+
++ (NSDate *)td_utcDateFromString:(NSString *)str format:(NSString *)format
+{
+    return [self td_dateFromString:str format:format timeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
+}
+
++ (NSDate *)td_dateFromString:(NSString *)str format:(NSString *)format timeZone:(NSTimeZone *)timeZone
+{
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     dateFormat.dateFormat = format;
-    dateFormat.timeZone = [NSTimeZone systemTimeZone];
-    
+    dateFormat.timeZone = timeZone;
+
     return [dateFormat dateFromString:str];
 }
 
