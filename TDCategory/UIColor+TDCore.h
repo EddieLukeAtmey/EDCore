@@ -16,4 +16,7 @@
 /** Init a color with its ARGB hex value (E.g. 0x00FF0000 = Red transparent color (alpha = 0). */
 + (UIColor *)colorWithARGBHex:(NSInteger)hexValue;
 
+/** Convert UIColor to UIImage to set as background image. */
+- (UIImage *)td_asBackgroundImage;
+
 @end
