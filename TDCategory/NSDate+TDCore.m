@@ -341,6 +341,8 @@
 - (NSString *)td_stringFromFormat:(NSString *)format timeZone:(NSTimeZone *)timeZone
 {
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    dateFormat.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+    dateFormat.calendar = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
     dateFormat.dateFormat = format;
     dateFormat.timeZone = timeZone;
     return [dateFormat stringFromDate:self];
@@ -359,6 +361,8 @@
 + (NSDate *)td_dateFromString:(NSString *)str format:(NSString *)format timeZone:(NSTimeZone *)timeZone
 {
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    dateFormat.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+    dateFormat.calendar = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
     dateFormat.dateFormat = format;
     dateFormat.timeZone = timeZone;
 
