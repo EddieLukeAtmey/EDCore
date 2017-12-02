@@ -10,7 +10,7 @@
 #import "TestModel.h"
 #import "TestMultiDelegate.h"
 #import "TDViewController1.h"
-#import <EDCore/EDCore-Swift.h>
+@import EDCore;
 
 @interface TDViewController ()
 {
@@ -27,7 +27,10 @@
     vi = (TDDatePicker *)TD_CORE_VIEW_WITH_XIB_NAME(@"TDDatePicker");
     [vi td_setDatePickerMode:UIDatePickerModeDateAndTime];
     [vi td_configure:self.view];
-    
+
+    SMIconLabel *lb = SMIconLabel.new;
+    lb.iconView = nil;
+
     /*
     //test multi delegate
     TestMultiDelegate *testobj = [[TestMultiDelegate alloc] td_initWithDelegates:nil];
