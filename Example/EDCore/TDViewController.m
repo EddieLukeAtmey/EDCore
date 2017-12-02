@@ -10,6 +10,7 @@
 #import "TestModel.h"
 #import "TestMultiDelegate.h"
 #import "TDViewController1.h"
+#import <EDCore/EDCore-Swift.h>
 
 @interface TDViewController ()
 {

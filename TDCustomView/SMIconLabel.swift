@@ -15,6 +15,8 @@ public enum SMIconLabelPosition : Int {
 @IBDesignable
 open class SMIconLabel: UILabel {
 
+    open var iconView: UIImageView?
+
     /** Image that will be placed with a text*/
     @IBInspectable open var icon: UIImage?
 
@@ -32,8 +34,6 @@ open class SMIconLabel: UILabel {
 
     /** Additional spacing between text and image */
     @IBInspectable open var iconPadding: CGFloat = 5
-
-    open var iconView: UIImageView?
 
     // MARK: Custom text drawings
     open override func drawText(in rect: CGRect) {
