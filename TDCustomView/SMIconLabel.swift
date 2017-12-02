@@ -15,7 +15,7 @@ public enum SMIconLabelPosition : Int {
 @IBDesignable
 open class SMIconLabel: UILabel {
 
-    open var iconView: UIImageView?
+    public var iconView: UIImageView?
 
     /** Image that will be placed with a text*/
     @IBInspectable open var icon: UIImage?
