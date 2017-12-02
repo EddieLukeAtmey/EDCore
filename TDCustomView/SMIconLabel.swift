@@ -55,9 +55,9 @@ open class SMIconLabel: UILabel {
 
             if let text = self.text as NSString? {
                 size = text.boundingRect(with: CGSize(width: frame.width, height: frame.height),
-                    options: NSStringDrawingOptions.usesLineFragmentOrigin,
-                    attributes: [ NSFontAttributeName : font ],
-                    context: nil).size
+                                         options: NSStringDrawingOptions.usesLineFragmentOrigin,
+                                         attributes: [ NSAttributedStringKey.font : font ],
+                                         context: nil).size
             }
 
             if let iconView = iconView {
@@ -100,3 +100,4 @@ open class SMIconLabel: UILabel {
         super.init(coder: aDecoder)
     }
 }
+
