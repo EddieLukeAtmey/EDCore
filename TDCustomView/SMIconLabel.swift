@@ -48,7 +48,7 @@ open class SMIconLabel: UILabel {
         if let icon = icon {
             iconView?.removeFromSuperview()
             iconView = UIImageView(image: icon)
-            iconView?.contentMode = UIViewContentMode.scaleAspectFit;
+            iconView?.contentMode = .scaleAspectFit;
             iconView?.frame = CGRect(x: 0, y: 0, width: rect.size.height, height: rect.size.height)
 
             var newRect: CGRect = CGRect.zero
@@ -57,7 +57,7 @@ open class SMIconLabel: UILabel {
             if let text = self.text as NSString? {
                 size = text.boundingRect(with: CGSize(width: frame.width, height: frame.height),
                                          options: NSStringDrawingOptions.usesLineFragmentOrigin,
-                                         attributes: [ NSAttributedStringKey.font : font ],
+                                         attributes: [NSAttributedString.Key.font : font! ],
                                          context: nil).size
             }
 

@@ -39,19 +39,6 @@
  */
 - (void)firstDidDisappear;
 
-
-#pragma mark - Orientation
-
-/**
- *  layoutForPortrait
- */
-- (void)layoutForPortrait;
-
-/**
- *  layoutForLandscape
- */
-- (void)layoutForLandscape;
-
 @end
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -147,7 +134,7 @@
 #pragma mark - Category Util
 @interface TDBaseViewController (Util)
 
-- (void)td_delay:(CGFloat)secs completed:(void (^) ())completed;
+- (void)td_delay:(CGFloat)secs completed:(void (^) (void))completed;
 - (UIView *)td_getViewFromXib:(NSString *)nameXib index:(NSInteger )index;
 
 @end
@@ -157,8 +144,8 @@
 #pragma mark - Category threads
 @interface TDBaseViewController (threads)
 
-- (void)td_main_thread:(void(^)())block;
-- (void)td_background_thread:(void(^)())block;
+- (void)td_main_thread:(void(^)(void))block;
+- (void)td_background_thread:(void(^)(void))block;
 
 @end
 

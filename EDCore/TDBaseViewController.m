@@ -149,34 +149,6 @@
 }
 
 #pragma mark - Orientation
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{
-    if ( toInterfaceOrientation == UIDeviceOrientationPortrait )
-        {
-        [self layoutForPortrait];
-        }
-    else if ( toInterfaceOrientation == UIDeviceOrientationLandscapeLeft || toInterfaceOrientation == UIDeviceOrientationLandscapeRight )
-        {
-        [self layoutForLandscape];
-        }
-}
-
-/**
- *  layoutForPortrait
- */
-- (void)layoutForPortrait
-{
-    // Begin code here
-}
-
-/**
- *  layoutForLandscape
- */
-- (void)layoutForLandscape
-{
-    // Begin code here
-}
-
 @end
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -353,7 +325,7 @@
 #pragma mark - Category Util
 @implementation TDBaseViewController (Util)
 
-- (void)td_delay:(CGFloat)secs completed:(void (^) ())completed
+- (void)td_delay:(CGFloat)secs completed:(void (^) (void))completed
 {
     double delayInSeconds = secs;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
@@ -375,14 +347,14 @@
 #pragma mark - Category threads
 @implementation TDBaseViewController (threads)
 
-- (void)td_main_thread:(void(^)())block
+- (void)td_main_thread:(void(^)(void))block
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         block();
     });
 }
 
-- (void)td_background_thread:(void(^)())block
+- (void)td_background_thread:(void(^)(void))block
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         block();

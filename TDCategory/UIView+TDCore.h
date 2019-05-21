@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "EDMacro.h"
 
-typedef void (^UIViewTDCoreBlock) ();
+typedef void (^UIViewTDCoreBlock) (void);
 
 @interface UIView (TDCore)
 

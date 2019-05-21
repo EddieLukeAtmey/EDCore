@@ -11,21 +11,21 @@
 @implementation NSObject (TDCore)
 
 #pragma mark - BLOCK
-+ (void)td_mainThread:(void (^)())block
++ (void)td_mainThread:(void (^)(void))block
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         block();
     });
 }
 
-+ (void)td_backgroundThread:(void (^)())block
++ (void)td_backgroundThread:(void (^)(void))block
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         block();
     });
 }
 
-+ (void)td_mainThread:(void (^)())block afterDelay:(double)secs
++ (void)td_mainThread:(void (^)(void))block afterDelay:(double)secs
 {
     double delayInSeconds = secs;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);

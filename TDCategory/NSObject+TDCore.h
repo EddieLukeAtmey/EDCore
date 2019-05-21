@@ -11,9 +11,9 @@
 @interface NSObject (TDCore)
 
 #pragma mark - TD_BLOCK
-+ (void)td_mainThread:(void (^)())block;
-+ (void)td_backgroundThread:(void (^)())block;
-+ (void)td_mainThread:(void (^)())block afterDelay:(double)secs;
++ (void)td_mainThread:(void (^)(void))block;
++ (void)td_backgroundThread:(void (^)(void))block;
++ (void)td_mainThread:(void (^)(void))block afterDelay:(double)secs;
 
 
 @end

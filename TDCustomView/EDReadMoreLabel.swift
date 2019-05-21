@@ -39,8 +39,8 @@ class EDReadMoreLabel: UILabel {
         lineBreakMode = .byClipping
         numberOfLines = 3
         collapsedAttributedLink = NSAttributedString(string: "read more",
-                                                     attributes: [NSAttributedStringKey.font: self.font,
-                                                                  NSAttributedStringKey.foregroundColor: UIColor.init(rgbHex: 0x37A3B1)])
+                                                     attributes: [NSAttributedString.Key.font: font!,
+                                                                  NSAttributedString.Key.foregroundColor: UIColor(rgbHex: 0x37A3B1)!])
         ellipsis = NSAttributedString(string: "...")
     }
 
@@ -128,7 +128,7 @@ class EDReadMoreLabel: UILabel {
             let lineTextWithAddedLink = NSMutableAttributedString(attributedString: lineTextWithLastWordRemoved)
             if let ellipsis = self.ellipsis {
                 lineTextWithAddedLink.append(ellipsis)
-                lineTextWithAddedLink.append(NSAttributedString(string: " ", attributes: [NSAttributedStringKey.font: self.font]))
+                lineTextWithAddedLink.append(NSAttributedString(string: " ", attributes: [NSAttributedString.Key.font: self.font!]))
             }
             lineTextWithAddedLink.append(linkName)
             let fits = self.textFitsWidth(lineTextWithAddedLink)
@@ -164,14 +164,14 @@ class EDReadMoreLabel: UILabel {
 private extension NSAttributedString {
     func hasFontAttribute() -> Bool {
         guard !self.string.isEmpty else { return false }
-        let font = self.attribute(NSAttributedStringKey.font, at: 0, effectiveRange: nil) as? UIFont
+        let font = self.attribute(NSAttributedString.Key.font, at: 0, effectiveRange: nil) as? UIFont
         return font != nil
     }
 
     func copyWithAddedFontAttribute(_ font: UIFont) -> NSAttributedString {
         if !hasFontAttribute() {
             let copy = NSMutableAttributedString(attributedString: self)
-            copy.addAttribute(NSAttributedStringKey.font, value: font, range: NSRange(location: 0, length: copy.length))
+            copy.addAttribute(NSAttributedString.Key.font, value: font, range: NSRange(location: 0, length: copy.length))
             return copy
         }
         return self.copy() as! NSAttributedString
@@ -179,11 +179,11 @@ private extension NSAttributedString {
 
     func copyWithHighlightedColor() -> NSAttributedString {
         let alphaComponent = CGFloat(0.5)
-        let baseColor: UIColor = (self.attribute(NSAttributedStringKey.foregroundColor, at: 0, effectiveRange: nil) as? UIColor)?.withAlphaComponent(alphaComponent) ?? UIColor.black.withAlphaComponent(alphaComponent)
+        let baseColor: UIColor = (self.attribute(NSAttributedString.Key.foregroundColor, at: 0, effectiveRange: nil) as? UIColor)?.withAlphaComponent(alphaComponent) ?? UIColor.black.withAlphaComponent(alphaComponent)
         let highlightedCopy = NSMutableAttributedString(attributedString: self)
         let range = NSRange(location: 0, length: highlightedCopy.length)
-        highlightedCopy.removeAttribute(NSAttributedStringKey.foregroundColor, range: range)
-        highlightedCopy.addAttribute(NSAttributedStringKey.foregroundColor, value: baseColor, range: range)
+        highlightedCopy.removeAttribute(NSAttributedString.Key.foregroundColor, range: range)
+        highlightedCopy.addAttribute(NSAttributedString.Key.foregroundColor, value: baseColor, range: range)
         return highlightedCopy
     }
 
