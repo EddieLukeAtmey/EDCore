@@ -21,6 +21,7 @@ Pod::Spec.new do |s|
 
     s.platform     = :ios, '8.0'
     s.requires_arc = true
+    s.swift_version = '5.0'
     s.frameworks   = ['Foundation', 'UIKit', 'CoreGraphics', 'QuartzCore', 'CoreFoundation']
 
     s.source_files = 'EDCore/*', '**/*.swift', '*.swift'
