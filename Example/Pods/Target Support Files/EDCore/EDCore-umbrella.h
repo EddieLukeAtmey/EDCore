@@ -31,6 +31,7 @@
 #import "UIStoryboard+TDCore.h"
 #import "UIView+TDCore.h"
 #import "UIView+TDRecognizer.h"
+#import "UIViewController+TDAlert.h"
 #import "TDDatePicker.h"
 #import "UIAlertView+Block.h"
 #import "UIButton+TDEvent.h"

@@ -1,37 +1,41 @@
 PODS:
-  - AutoCoding (2.2.2)
-  - EDCore (1.0):
+  - AutoCoding (2.2.3)
+  - EDCore (1.1):
     - AutoCoding
-    - EDCore/IBHelper (= 1.0)
-    - EDCore/TDCategory (= 1.0)
-    - EDCore/TDCustomView (= 1.0)
-    - EDCore/TDEvent (= 1.0)
-    - EDCore/TDPopup (= 1.0)
-    - EDCore/TDUtils (= 1.0)
-  - EDCore/IBHelper (1.0):
+    - EDCore/IBHelper (= 1.1)
+    - EDCore/TDCategory (= 1.1)
+    - EDCore/TDCustomView (= 1.1)
+    - EDCore/TDEvent (= 1.1)
+    - EDCore/TDPopup (= 1.1)
+    - EDCore/TDUtils (= 1.1)
+  - EDCore/IBHelper (1.1):
     - AutoCoding
-  - EDCore/TDCategory (1.0):
+  - EDCore/TDCategory (1.1):
     - AutoCoding
-  - EDCore/TDCustomView (1.0):
+  - EDCore/TDCustomView (1.1):
     - AutoCoding
-  - EDCore/TDEvent (1.0):
+  - EDCore/TDEvent (1.1):
     - AutoCoding
-  - EDCore/TDPopup (1.0):
+  - EDCore/TDPopup (1.1):
     - AutoCoding
-  - EDCore/TDUtils (1.0):
+  - EDCore/TDUtils (1.1):
     - AutoCoding
 
 DEPENDENCIES:
   - EDCore (from `../`)
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AutoCoding
+
 EXTERNAL SOURCES:
   EDCore:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  AutoCoding: 56fa46dbfa89d44189a26ce64e6a470ed8ff4661
-  EDCore: 7c550aa83db72cbed76f13295712540a9ed16759
+  AutoCoding: 90ca3cbc0d77a37cfff75167d705b44148c5fc51
+  EDCore: 26c73a32a8ecc3f1f4da2b49c8da25ca26eff36c
 
 PODFILE CHECKSUM: 8911b63856036c7398168e7d29423d619cae9c3d
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.9.1

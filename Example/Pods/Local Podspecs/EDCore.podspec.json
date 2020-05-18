@@ -1,6 +1,6 @@
 {
   "name": "EDCore",
-  "version": "1.0",
+  "version": "1.1",
   "summary": "EDCore is a iOS framework. You have beauty project and stable. It will down time development for you",
   "description": "EDCore allows configure & create base to any iOS Project. Below are services needed to be implement basic funtion. so it's help to you can write short code and meanable. So you will the clear source code",
   "homepage": "https://github.com/EddieLukeAtmey/EDCore",
@@ -10,12 +10,16 @@
   },
   "source": {
     "git": "https://github.com/EddieLukeAtmey/EDCore.git",
-    "tag": "1.0"
+    "tag": "1.1"
   },
   "platforms": {
     "ios": "8.0"
   },
   "requires_arc": true,
+  "swift_versions": [
+    "5.1",
+    "5.2"
+  ],
   "frameworks": [
     "Foundation",
     "UIKit",
@@ -23,7 +27,11 @@
     "QuartzCore",
     "CoreFoundation"
   ],
-  "source_files": "EDCore/*",
+  "source_files": [
+    "EDCore/*",
+    "**/*.swift",
+    "*.swift"
+  ],
   "resources": "Resources/**/*.{png,xib,storyboad}",
   "public_header_files": "EDCore/*.h",
   "dependencies": {
@@ -56,5 +64,6 @@
       "name": "TDCustomView",
       "source_files": "TDCustomView/**/*"
     }
-  ]
+  ],
+  "swift_version": "5.2"
 }
