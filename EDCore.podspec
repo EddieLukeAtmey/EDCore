@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
     s.name             = "EDCore"
-    s.version          = "1.0"
+    s.version          = "1.1"
     s.summary          = "EDCore is a iOS framework. You have beauty project and stable. It will down time development for you"
     s.description      = "EDCore allows configure & create base to any iOS Project. Below are services needed to be implement basic funtion. so it's help to you can write short code and meanable. So you will the clear source code"
     s.homepage         = "https://github.com/EddieLukeAtmey/EDCore"
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 
     s.platform     = :ios, '8.0'
     s.requires_arc = true
-    s.swift_version = '5.0'
+    s.swift_versions = ['5.1', '5.2']
     s.frameworks   = ['Foundation', 'UIKit', 'CoreGraphics', 'QuartzCore', 'CoreFoundation']
 
     s.source_files = 'EDCore/*', '**/*.swift', '*.swift'
